@@ -1,0 +1,277 @@
+{
+  "profile": {
+    "name": "Sahil Dangol",
+    "role": "Full-Stack AI Engineer",
+    "location": "Lalitpur, Nepal",
+    "tagline": "Designing and deploying reliable full-stack AI systems from architecture to production.",
+    "experienceSummary": "2+ years delivering full-stack products, backend services, and AI-enabled workflows.",
+    "cvUrl": "/SahilDangolCV.pdf",
+    "socialLinks": [
+      {
+        "id": "website",
+        "label": "Website",
+        "url": "https://sahil.info.np"
+      },
+      {
+        "id": "linkedin",
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/sahil-dangol"
+      },
+      {
+        "id": "github",
+        "label": "GitHub",
+        "url": "https://github.com/your-username"
+      }
+    ]
+  },
+  "navLinks": [
+    { "id": "about", "title": "About" },
+    { "id": "highlights", "title": "Focus" },
+    { "id": "experience", "title": "Experience" },
+    { "id": "projects", "title": "Projects" },
+    { "id": "lab", "title": "AI/ML" },
+    { "id": "skills", "title": "Skills" },
+    { "id": "contact", "title": "Contact" }
+  ],
+  "heroHighlights": [
+    "2+ years in Software Engineering",
+    "AI/ML systems for fintech and forecasting",
+    "President at KathFOSS"
+  ],
+  "insightCards": [
+    {
+      "id": "architecture",
+      "title": "System Design to Deployment",
+      "description": "Lead architecture, API contracts, data modeling, and production rollout with measurable reliability.",
+      "badge": "E2E"
+    },
+    {
+      "id": "ai-engineering",
+      "title": "Applied AI Engineering",
+      "description": "Build RAG and forecasting pipelines grounded in evaluation, governance, and practical business impact.",
+      "badge": "AI"
+    },
+    {
+      "id": "execution",
+      "title": "Execution Under Constraints",
+      "description": "Ship quickly without compromising maintainability, observability, or stakeholder communication.",
+      "badge": "OPS"
+    }
+  ],
+  "services": [
+    {
+      "id": "fullstack",
+      "title": "Full-Stack Product Engineering",
+      "description": "React, Node.js, Python services, and resilient APIs for production-scale apps.",
+      "iconKey": "web"
+    },
+    {
+      "id": "ai-ml",
+      "title": "AI/ML Product Integration",
+      "description": "Agentic workflows, RAG architecture, and model-backed decision systems.",
+      "iconKey": "backend"
+    },
+    {
+      "id": "system-design",
+      "title": "System Design and Architecture",
+      "description": "Microservice boundaries, schema design, and performance-oriented backend planning.",
+      "iconKey": "mobile"
+    },
+    {
+      "id": "community",
+      "title": "Engineering Leadership",
+      "description": "Cross-functional planning, mentoring, and open-source community programs.",
+      "iconKey": "creator"
+    }
+  ],
+  "focusTabs": [
+    {
+      "id": "engineering",
+      "label": "Engineering",
+      "points": [
+        "Own full feature lifecycle from requirement definition to monitored deployment.",
+        "Build maintainable frontends and backend services with clear interfaces.",
+        "Optimize performance and reliability through profiling, caching, and clean data flow."
+      ]
+    },
+    {
+      "id": "ai",
+      "label": "AI/ML",
+      "points": [
+        "Deploy forecasting and retrieval systems that support real decisions.",
+        "Use practical evaluation loops for prompt quality, model drift, and output trust.",
+        "Integrate AI capabilities into product UX instead of isolated demos."
+      ]
+    },
+    {
+      "id": "fintech",
+      "label": "FinTech",
+      "points": [
+        "Design financial data pipelines with consistency and auditability in mind.",
+        "Translate market signals into dashboards and actionable product insights.",
+        "Balance delivery speed with accuracy and risk controls in reporting flows."
+      ]
+    },
+    {
+      "id": "leadership",
+      "label": "Leadership",
+      "points": [
+        "Coordinate engineering priorities with product and stakeholder needs.",
+        "Lead open-source collaboration and technical mentorship through KathFOSS.",
+        "Drive projects from proof-of-concept to practical adoption."
+      ]
+    }
+  ],
+  "about": {
+    "heading": "Engineering Products That Hold Up In Production",
+    "description": "I build end-to-end software systems where strong architecture meets reliable implementation. My work combines full-stack engineering, AI/ML integration, and fintech research to deliver products that are clear to operate and valuable to users.",
+    "credentials": [
+      {
+        "id": "rice",
+        "title": "Credential",
+        "name": "Rice University Engineering Project Management Specialization",
+        "url": "https://your-credential-link"
+      },
+      {
+        "id": "education",
+        "title": "Education Focus",
+        "name": "Tribhuvan University, Bachelor of Computer Engineering (2023-2027)",
+        "description": "Focused on distributed systems, data engineering, and AI-integrated software architecture.",
+        "url": "https://your-education-link"
+      }
+    ]
+  },
+  "experiences": [
+    {
+      "id": "asteroid-se",
+      "title": "Software Engineer",
+      "company_name": "Asteroid Studios",
+      "iconKey": "logo",
+      "iconBg": "#0F172A",
+      "date": "May 2024 - Present",
+      "url": "https://your-company-link",
+      "points": [
+        "Built enterprise accounting capabilities with robust SQL schemas and high-performance backend APIs.",
+        "Architected hardware-integrated and microservice-driven workflows for high-concurrency operations.",
+        "Partnered with business stakeholders to align technical delivery with measurable product outcomes."
+      ]
+    },
+    {
+      "id": "kathfoss-president",
+      "title": "President",
+      "company_name": "KathFOSS",
+      "iconKey": "creator",
+      "iconBg": "#111827",
+      "date": "2025 - Present",
+      "url": "https://your-kathfoss-link",
+      "points": [
+        "Lead national open-source initiatives connecting students, researchers, and industry contributors.",
+        "Directed delivery of community platforms and programs with Agile execution discipline.",
+        "Mentored builders through workshops and collaborative technical events."
+      ]
+    }
+  ],
+  "featuredProjects": [
+    {
+      "id": "nasa-space-apps",
+      "title": "NASA Space Apps Project",
+      "subtitle": "Global Nominee",
+      "description": "Built an immersive terrain and landing simulation concept under hackathon constraints, emphasizing engineering rigor and rapid iteration.",
+      "tags": ["Simulation", "Geospatial", "Rapid Prototyping"],
+      "metrics": ["Global Nominee", "2023"],
+      "className": "md:col-span-3 md:row-span-2",
+      "accent": "from-sky-500/20 via-slate-900/20 to-cyan-500/20",
+      "url": "https://your-nasa-project-link"
+    },
+    {
+      "id": "krishi-sathi",
+      "title": "Krishi Sathi AI Assistant",
+      "subtitle": "Nationwide Hackathon Winner",
+      "description": "Developed an AI assistant for localized agricultural and financial guidance with a practical product-first UX.",
+      "tags": ["Assistant", "Localization", "Agritech"],
+      "metrics": ["Winner", "2024"],
+      "className": "md:col-span-3 md:row-span-1",
+      "accent": "from-emerald-500/20 via-slate-900/20 to-teal-500/20",
+      "url": "https://your-krishi-sathi-link"
+    },
+    {
+      "id": "nepse-catboost",
+      "title": "Quantitative NEPSE Predictor",
+      "subtitle": "CatBoost Strategy",
+      "description": "Engineered a short-term return prediction pipeline with regime filtering and temporal feature design for improved market signal quality.",
+      "tags": ["CatBoost", "Quant", "Time-Series"],
+      "metrics": ["9 Features", "Regime Filter"],
+      "className": "md:col-span-2 md:row-span-1",
+      "accent": "from-amber-500/20 via-slate-900/20 to-orange-500/20",
+      "url": "https://your-nepse-project-link"
+    },
+    {
+      "id": "autotft-research",
+      "title": "AutoTFT Forecasting Research",
+      "subtitle": "Banking Sector Forecasting",
+      "description": "Led 7-day banking-sector forecasting research using Temporal Fusion Transformers with curated longitudinal financial datasets.",
+      "tags": ["PyTorch", "AutoTFT", "Forecasting"],
+      "metrics": ["7-Day Horizon", "OHLCV + Fundamentals"],
+      "className": "md:col-span-4 md:row-span-1",
+      "accent": "from-rose-500/20 via-slate-900/20 to-red-500/20",
+      "url": "https://your-autotft-project-link"
+    }
+  ],
+  "lab": {
+    "title": "AI/ML Systems Lab",
+    "subtitle": "Production-minded Research",
+    "description": "I focus on practical AI systems that combine forecasting, retrieval, and responsible deployment patterns for real product environments.",
+    "highlights": [
+      {
+        "id": "forecasting",
+        "title": "Financial Forecasting Stack",
+        "description": "Temporal Fusion Transformer workflows for short-term directional movement modeling."
+      },
+      {
+        "id": "rag",
+        "title": "Hybrid Retrieval Pipelines",
+        "description": "RAG architecture connecting market context and supporting evidence to model output."
+      },
+      {
+        "id": "data",
+        "title": "Dataset Engineering",
+        "description": "Structured OHLCV and fundamentals for consistent experimentation and evaluation."
+      }
+    ],
+    "cards": [
+      {
+        "id": "methods",
+        "title": "Methods",
+        "value": "RAG, TFT, CatBoost, Evaluation"
+      },
+      {
+        "id": "outcome",
+        "title": "Outcome Focus",
+        "value": "Explainable and deployable AI systems"
+      }
+    ]
+  },
+  "skillGroups": [
+    {
+      "id": "languages",
+      "title": "Languages",
+      "items": ["Python", "TypeScript", "JavaScript", "SQL"]
+    },
+    {
+      "id": "backend",
+      "title": "Backend and Infra",
+      "items": ["FastAPI", "Django", "Node.js", "PostgreSQL", "Redis", "Docker"]
+    },
+    {
+      "id": "frontend",
+      "title": "Frontend and Product",
+      "items": ["React", "Next.js", "Vue.js", "Tailwind CSS", "Framer Motion"]
+    }
+  ],
+  "contact": {
+    "sectionLabel": "Let's Build",
+    "heading": "Contact",
+    "description": "Open to full-stack engineering, AI product, and fintech system opportunities.",
+    "email": "dangolsahil2005@gmail.com"
+  }
+}

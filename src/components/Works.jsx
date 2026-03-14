@@ -1,88 +1,68 @@
-import React from "react";
-import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
-import { projects } from "../constants";
-import { fadeIn, textVariant } from "../utils/motion";
-
-const ProjectCard = ({
-  index,
-  name,
-  description,
-  tags,
-  image,
-  source_code_link,
-}) => {
-  return (
-    <motion.div varients={fadeIn("up", "spring,index*0.5,0.75")}>
-      <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
-      >
-        <div className="relative w-full h-[230px]">
-          <img
-            src={image}
-            alt='project_image'
-            className="w=full h-full object-cover rounded-2xl"
-          />
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div
-              onClick={() => window.open(source.source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-            >
-              <img
-                src={github}
-                alt="github"
-                className="w-1/2 h-1/2  object-contain"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="mt-5">
-          <h3 className="text-white font-bold test-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
-        </div>
-
-        <div className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag) => (
-            <p key={tag.name} className={`text-[14px] ${tag.color}`}>
-              #{tag.name}
-            </p>
-          ))}
-        </div>
-      </Tilt>
-    </motion.div>
-  );
-};
+import { featuredProjects } from "../constants";
+import { textVariant } from "../utils/motion";
 
 const Works = () => {
+  const loopProjects = [...featuredProjects, ...featuredProjects];
+
   return (
     <>
-      <motion.div varients={textVariant()}>
-        <p className={styles.sectionSubText}>My Work</p>
-        <h2 className={styles.sectionHeadText}>PROJECTS UNDER DEVELOPMENT</h2>
+      <motion.div variants={textVariant()}>
+        <p className={styles.sectionSubText}>Featured Projects</p>
+        <h2 className={styles.sectionHeadText}>Project Stream.</h2>
       </motion.div>
-      <div className="w-full flex">
-        <motion.p
-          varients={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-secondary text[17px] max-w-3xl leading-[30px]"
-        >
-          Following Projects ShowCase My SKills And Experiences:
-        </motion.p>
-      </div>
-      <div className="mt-20 flex flex-wrap gap-7">
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
-        ))}
+
+      <div className="mt-8 overflow-hidden rounded-3xl">
+        <div className="carousel-track flex w-max gap-4 sm:gap-6">
+          {loopProjects.map((project, index) => (
+            <article
+              key={`${project.id}-${index}`}
+              className="relative min-h-[280px] w-[85vw] max-w-[620px] md:w-[46vw] lg:w-[44vw] overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-8"
+            >
+              <div
+                className={`absolute inset-0 opacity-70 bg-gradient-to-br ${project.accent}`}
+                aria-hidden="true"
+              />
+              <div className="relative z-10 flex h-full flex-col justify-between">
+                <div className="space-y-3">
+                  <p className="text-xs uppercase tracking-[0.35em] text-white/60">
+                    {project.subtitle}
+                  </p>
+                  <h3 className="text-2xl sm:text-3xl text-white font-display">
+                    {project.title}
+                  </h3>
+                </div>
+
+                <div className="mt-6 flex flex-wrap gap-2 text-xs text-white/75">
+                  {project.metrics.map((metric, metricIndex) => (
+                    <span
+                      key={`${project.id}-metric-${metricIndex}`}
+                      className="rounded-full border border-white/20 px-3 py-1 font-mono"
+                    >
+                      {metric}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="mt-4">
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex rounded-full border border-white/20 px-3 py-1.5 text-xs font-medium text-white/85 transition hover:text-white"
+                  >
+                    Open Project Link
+                  </a>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </>
   );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, "projects");

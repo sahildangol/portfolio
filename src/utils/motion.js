@@ -36,6 +36,27 @@ export const textVariant = (delay) => {
       },
     };
   };
+
+// High-end staggered entrance
+export const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+export const item = {
+  hidden: { y: 20, opacity: 0 },
+  show: {
+    y: 0,
+    opacity: 1,
+    transition: { type: "spring", stiffness: 300, damping: 24 },
+  },
+};
   
   export const zoomIn = (delay, duration) => {
     return {
@@ -75,13 +96,13 @@ export const textVariant = (delay) => {
     };
   };
   
-  export const staggerContainer = (staggerChildren, delayChildren) => {
+export const staggerContainer = (staggerChildren = 0.1, delayChildren = 0) => {
     return {
       hidden: {},
       show: {
         transition: {
           staggerChildren: staggerChildren,
-          delayChildren: delayChildren || 0,
+          delayChildren: delayChildren,
         },
       },
     };

@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
-import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import { navLinks, profile } from "../constants";
+import { brandLogo, menu, close } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -27,72 +27,84 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${
-        styles.paddingX 
-      } sm:styles.paddingX w-full flex items-center py-5 fixed top-0 z-20 ${
-        scrolled ? "bg-primary" : "bg-transparent"
+      className={`${styles.paddingX} fixed top-0 z-30 w-full transition ${
+        scrolled ? "bg-stealth-900/80 backdrop-blur" : "bg-transparent"
       }`}
+      aria-label="Primary"
     >
-      <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between py-5">
         <Link
-          to='/'
-          className='flex items-center gap-2'
+          to="/"
+          className="flex items-center gap-4"
           onClick={() => {
             setActive("");
-            window.scrollTo(0, 0);
+            window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >
-          <img src={logo} alt='logo' className='w-22 h-14 object-contain'/>
-          <p className='text-white text-[22px] font-poppins font-semibold cursor-pointer flex flex-col sm:flex-row'>
-  <span>Sahil's&nbsp;</span>
-  <span>Space</span>
-</p>
-
+          <img
+            src={brandLogo}
+            alt={`${profile.name} logo`}
+            className="h-12 w-12 rounded-2xl object-contain"
+          />
+          <p className="text-white text-xl font-display font-semibold tracking-wide">
+            {profile.name}
+          </p>
         </Link>
 
-        <ul className='list-none hidden sm:flex flex-row gap-10'>
+        <ul className="hidden list-none items-center gap-8 sm:flex">
           {navLinks.map((nav) => (
             <li
               key={nav.id}
-              className={`${
-                active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
+              className={`text-sm font-medium transition ${
+                active === nav.title ? "text-white" : "text-white/60"
+              } hover:text-white`}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <a
+                href={`#${nav.id}`}
+                onClick={() => setActive(nav.title)}
+                aria-current={active === nav.title ? "page" : undefined}
+              >
+                {nav.title}
+              </a>
             </li>
           ))}
         </ul>
 
-        <div className='sm:hidden flex flex-1 justify-end items-center'>
-          <img
-            src={toggle ? close : menu}
-            alt='menu'
-            className='w-[28px] h-[28px] object-contain'
+        <div className="sm:hidden flex flex-1 justify-end items-center">
+          <button
+            type="button"
+            className="rounded-full border border-white/10 p-2"
             onClick={() => setToggle(!toggle)}
-          />
+            aria-label="Toggle navigation"
+            aria-expanded={toggle}
+            aria-controls="mobile-menu"
+          >
+            <img
+              src={toggle ? close : menu}
+              alt=""
+              className="h-5 w-5 object-contain"
+            />
+          </button>
 
           <div
+            id="mobile-menu"
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            } glass-card absolute top-20 right-4 min-w-[180px] flex-col gap-4 rounded-2xl p-6`}
           >
-            <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
-              {navLinks.map((nav) => (
-                <li
-                  key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
-                  }`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive(nav.title);
-                  }}
-                >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
-                </li>
-              ))}
-            </ul>
+            {navLinks.map((nav) => (
+              <a
+                key={nav.id}
+                href={`#${nav.id}`}
+                className="text-sm font-medium text-white/70 hover:text-white"
+                onClick={() => {
+                  setToggle(false);
+                  setActive(nav.title);
+                }}
+              >
+                {nav.title}
+              </a>
+            ))}
           </div>
         </div>
       </div>

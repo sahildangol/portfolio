@@ -1,46 +1,141 @@
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
+import { heroHighlights, insightCards, profile } from "../constants";
+import { container, item } from "../utils/motion";
 
 const Hero = () => {
   return (
-    <section className={`relative w-full h-screen mx-auto sm:'h-screen mx-auto'`}>
+    <section className="relative w-full min-h-screen overflow-hidden">
       <div
-        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+        className="absolute inset-0 stealth-grid opacity-15"
+        aria-hidden="true"
+      />
+      <div
+        className={`relative z-10 max-w-7xl mx-auto ${styles.paddingX} pt-28 pb-16 lg:pt-34 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] items-center`}
       >
-        <div className="flex flex-col justify-center items-center mt-0">
-          <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
-          <div className="w-1 sm:h-80 h-40 violet-gradient" />
-        </div>
+        <motion.div variants={container} initial="hidden" animate="show">
+          <motion.p
+            variants={item}
+            className="text-xs sm:text-sm uppercase tracking-[0.35em] text-white/60"
+          >
+            Full-Stack + AI Engineering
+          </motion.p>
+          <motion.h1 variants={item} className={`${styles.heroHeadText} mt-4`}>
+            {profile.name.split(" ")[0]}{" "}
+            <span className="text-violet-300 text-glow">
+              {profile.name.split(" ").slice(1).join(" ")}
+            </span>
+          </motion.h1>
+          <motion.p variants={item} className={`${styles.heroSubText} mt-6`}>
+            {profile.role}
+          </motion.p>
+          <motion.p
+            variants={item}
+            className="mt-3 text-sm sm:text-base text-white/80"
+          >
+            <span className="font-extrabold text-violet-200">
+              2+ years of experience
+            </span>{" "}
+            in full-stack development and applied AI workflows.
+          </motion.p>
 
-        <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className="text-[#915EFF]">Sahil</span>
-          </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            If Not Me,Who?
-            <br className="sm:block hidden" />
-            If Not Now,When? 
-          </p>
+          <motion.ul
+            variants={container}
+            className="mt-8 grid gap-3 sm:grid-cols-2 text-sm text-white/80"
+          >
+            {heroHighlights.map((text) => (
+              <motion.li
+                key={text}
+                variants={item}
+                className={`glass-card rounded-xl px-4 py-3 leading-relaxed ${
+                  text.includes("2+ years") ? "font-bold text-white" : ""
+                }`}
+              >
+                {text}
+              </motion.li>
+            ))}
+          </motion.ul>
+
+          <motion.div variants={item} className="mt-10 flex flex-wrap gap-4">
+            <motion.a
+              href={profile.cvUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-full bg-white text-stealth-900 px-6 py-3 text-sm font-semibold shadow-glow"
+              whileHover={{ y: -2 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            >
+              View CV
+            </motion.a>
+            <motion.a
+              href="#projects"
+              className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white/80 hover:text-white"
+              whileHover={{ y: -2 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            >
+              View Projects
+            </motion.a>
+            <motion.a
+              href="#contact"
+              className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white/80 hover:text-white"
+              whileHover={{ y: -2 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            >
+              Contact Me
+            </motion.a>
+          </motion.div>
+        </motion.div>
+
+        <div className="relative">
+          <div className="glass-card rounded-3xl p-6 sm:p-8">
+            <p className="text-sm text-white/60 uppercase tracking-[0.3em]">
+              Key Highlights
+            </p>
+            <div className="mt-6 grid gap-4">
+              {insightCards.map((card) => (
+                <div
+                  key={card.id}
+                  className="rounded-2xl border border-white/10 bg-white/5 p-4"
+                >
+                  <div className="flex items-center justify-between gap-3">
+                    <p className="text-white font-display">{card.title}</p>
+                    <span className="rounded-full border border-violet-300/45 px-2 py-1 text-[10px] font-mono tracking-[0.2em] text-violet-200">
+                      {card.badge}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-6 flex flex-wrap gap-2">
+              {profile.socialLinks.map((link) => (
+                <a
+                  key={link.id}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full border border-white/15 px-3 py-1.5 text-xs text-white/70 transition hover:text-white"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 
-      <ComputersCanvas />
-
-      <div className="absolute xs:bottom-0 bottom-32 w-full flex justify-center items-center">
-        <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+      <div className="absolute bottom-8 w-full flex justify-center items-center">
+        <a href="#about" aria-label="Scroll to About section">
+          <div className="w-[34px] h-[60px] rounded-3xl border border-white/30 flex justify-center items-start p-2">
             <motion.div
-              animate={{
-                y: [0, 24, 0],
-              }}
+              animate={{ y: [0, 18, 0] }}
               transition={{
-                duration: 1.5,
+                duration: 1.6,
                 repeat: Infinity,
                 repeatType: "loop",
               }}
-              className="w-3 h-3 rounded-full bg-secondary mb-1"
+              className="w-2.5 h-2.5 rounded-full bg-white/70 mb-1"
             />
           </div>
         </a>

@@ -1,58 +1,65 @@
-import React from "react";
-import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { services } from "../constants";
+import { about, services } from "../constants";
 import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
-
-const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='xs:w-[250px] w-full'>
-    <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
-    >
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
-      >
-        <img
-          src={icon}
-          alt='web-development'
-          className='w-16 h-16 object-contain'
-        />
-
-        <h3 className='text-white text-[20px] font-bold text-center'>
-          {title}
-        </h3>
-      </div>
-    </motion.div>
-  </Tilt>
-);
+import { container, item, textVariant } from "../utils/motion";
 
 const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+        <p className={styles.sectionSubText}>About Me</p>
+        <h2 className={styles.sectionHeadText}>{about.heading}</h2>
       </motion.div>
 
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+        className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4"
       >
-I am a passionate and versatile software developer specializing in cutting-edge Web3 solutions. With a strong background in digital marketing, strategic management, and business operations, I bridge the gap between technology and business to deliver impactful, scalable, and user-centric products. My expertise extends beyond development, with a solid understanding of finance and accounting, ensuring that the solutions I create are not only innovative but also viable in real-world business environments. A quick learner and problem-solver, I thrive on collaboration and turning ambitious ideas into reality. Let's partner to bring your vision to life with technology that truly makes a difference!
-      </motion.p>
+        {services.map((service) => (
+          <motion.div
+            key={service.id}
+            variants={item}
+            whileHover={{ y: -6 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            className="glass-card rounded-2xl p-6"
+          >
+            <img
+              src={service.icon}
+              alt={service.title}
+              className="h-10 w-10 object-contain"
+            />
+            <h3 className="mt-4 text-white font-display text-lg">
+              {service.title}
+            </h3>
+          </motion.div>
+        ))}
+      </motion.div>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
+      <div className="mt-12 grid gap-6 lg:grid-cols-3">
+        {about.credentials.map((credential) => (
+          <a
+            key={credential.id}
+            href={credential.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="glass-card rounded-2xl p-6 transition hover:-translate-y-1"
+          >
+            <p className="text-xs uppercase tracking-[0.3em] text-white/50">
+              {credential.title}
+            </p>
+            <p className="mt-3 text-white font-display">{credential.name}</p>
+            {credential.description && (
+              <p className="mt-2 text-sm text-white/65">
+                {credential.description}
+              </p>
+            )}
+            <p className="mt-4 text-xs text-violet-300">Open Link</p>
+          </a>
         ))}
       </div>
     </>
