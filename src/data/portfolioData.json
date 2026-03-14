@@ -7,11 +7,7 @@
     "experienceSummary": "2+ years delivering full-stack products, backend services, and AI-enabled workflows.",
     "cvUrl": "/SahilDangolCV.pdf",
     "socialLinks": [
-      {
-        "id": "website",
-        "label": "Website",
-        "url": "https://sahil.info.np"
-      },
+  
       {
         "id": "linkedin",
         "label": "LinkedIn",
