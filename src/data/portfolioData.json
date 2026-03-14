@@ -124,7 +124,6 @@
     "credentials": [
       {
         "id": "education",
-        "title": "Education Focus",
         "name": "Tribhuvan University, Bachelor of Computer Engineering (2023-2027)",
         "description": "Focused on distributed systems, data engineering, and AI-integrated software architecture.",
         "url": "https://education-link"
