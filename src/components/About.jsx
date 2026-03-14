@@ -39,7 +39,6 @@ const About = () => {
           </motion.div>
         ))}
       </motion.div>
-
     </>
   );
 };
