@@ -19,7 +19,7 @@ const AIMLLab = () => {
             Applied AI/ML
           </p>
           <h3 className="mt-4 text-white font-display text-2xl">
-            Forecasting, Retrieval, and Deployment
+            Forecasting Models, RAG , and Deployment
           </h3>
           <p className="mt-4 text-white/70 leading-relaxed">
             {lab.description}

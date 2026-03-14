@@ -17,7 +17,7 @@ const Hero = () => {
         <motion.div variants={container} initial="hidden" animate="show">
           <motion.p
             variants={item}
-            className="text-xs sm:text-sm uppercase tracking-[0.35em] text-white/60"
+            className="text-xs sm:text-sm uppercase tracking-[0.45em] text-white/60"
           >
             Full-Stack + AI Engineering
           </motion.p>
@@ -30,16 +30,6 @@ const Hero = () => {
           <motion.p variants={item} className={`${styles.heroSubText} mt-6`}>
             {profile.role}
           </motion.p>
-          <motion.p
-            variants={item}
-            className="mt-3 text-sm sm:text-base text-white/80"
-          >
-            <span className="font-extrabold text-violet-200">
-              2+ years of experience
-            </span>{" "}
-            in full-stack development and applied AI workflows.
-          </motion.p>
-
           <motion.ul
             variants={container}
             className="mt-8 grid gap-3 sm:grid-cols-2 text-sm text-white/80"
@@ -123,22 +113,6 @@ const Hero = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="absolute bottom-8 w-full flex justify-center items-center">
-        <a href="#about" aria-label="Scroll to About section">
-          <div className="w-[34px] h-[60px] rounded-3xl border border-white/30 flex justify-center items-start p-2">
-            <motion.div
-              animate={{ y: [0, 18, 0] }}
-              transition={{
-                duration: 1.6,
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-              className="w-2.5 h-2.5 rounded-full bg-white/70 mb-1"
-            />
-          </div>
-        </a>
       </div>
     </section>
   );

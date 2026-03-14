@@ -5,6 +5,7 @@ import {
   About,
   AIMLLab,
   Contact,
+  Education,
   Experience,
   FocusTabs,
   Hero,
@@ -71,6 +72,7 @@ const App = () => {
         <main id="main" className="relative z-10">
           <Hero />
           <About />
+          <Education />
           <FocusTabs />
           <Experience />
           <Works />

@@ -40,28 +40,6 @@ const About = () => {
         ))}
       </motion.div>
 
-      <div className="mt-12 grid gap-6 lg:grid-cols-3">
-        {about.credentials.map((credential) => (
-          <a
-            key={credential.id}
-            href={credential.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="glass-card rounded-2xl p-6 transition hover:-translate-y-1"
-          >
-            <p className="text-xs uppercase tracking-[0.3em] text-white/50">
-              {credential.title}
-            </p>
-            <p className="mt-3 text-white font-display">{credential.name}</p>
-            {credential.description && (
-              <p className="mt-2 text-sm text-white/65">
-                {credential.description}
-              </p>
-            )}
-            <p className="mt-4 text-xs text-violet-300">Open Link</p>
-          </a>
-        ))}
-      </div>
     </>
   );
 };

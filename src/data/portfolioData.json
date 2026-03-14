@@ -7,7 +7,6 @@
     "experienceSummary": "2+ years delivering full-stack products, backend services, and AI-enabled workflows.",
     "cvUrl": "/SahilDangolCV.pdf",
     "socialLinks": [
-  
       {
         "id": "linkedin",
         "label": "LinkedIn",
@@ -16,12 +15,13 @@
       {
         "id": "github",
         "label": "GitHub",
-        "url": "https://github.com/your-username"
+        "url": "https://github.com/sahildangol"
       }
     ]
   },
   "navLinks": [
     { "id": "about", "title": "About" },
+    { "id": "education", "title": "Education" },
     { "id": "highlights", "title": "Focus" },
     { "id": "experience", "title": "Experience" },
     { "id": "projects", "title": "Projects" },
@@ -31,7 +31,7 @@
   ],
   "heroHighlights": [
     "2+ years in Software Engineering",
-    "AI/ML systems for fintech and forecasting",
+    "AI/ML systems for Classification and forecasting",
     "President at KathFOSS"
   ],
   "insightCards": [
@@ -123,17 +123,17 @@
     "description": "I build end-to-end software systems where strong architecture meets reliable implementation. My work combines full-stack engineering, AI/ML integration, and fintech research to deliver products that are clear to operate and valuable to users.",
     "credentials": [
       {
-        "id": "rice",
-        "title": "Credential",
-        "name": "Rice University Engineering Project Management Specialization",
-        "url": "https://your-credential-link"
-      },
-      {
         "id": "education",
         "title": "Education Focus",
         "name": "Tribhuvan University, Bachelor of Computer Engineering (2023-2027)",
         "description": "Focused on distributed systems, data engineering, and AI-integrated software architecture.",
-        "url": "https://your-education-link"
+        "url": "https://education-link"
+      },
+      {
+        "id": "rice",
+        "title": "Credential",
+        "name": "Rice University , Engineering Project Management Specialization",
+        "url": "https://credential-link"
       }
     ]
   },
@@ -144,8 +144,8 @@
       "company_name": "Asteroid Studios",
       "iconKey": "logo",
       "iconBg": "#0F172A",
-      "date": "May 2024 - Present",
-      "url": "https://your-company-link",
+      "date": "May 2025 - Present",
+      "url": "https://company-link",
       "points": [
         "Built enterprise accounting capabilities with robust SQL schemas and high-performance backend APIs.",
         "Architected hardware-integrated and microservice-driven workflows for high-concurrency operations.",
@@ -159,7 +159,7 @@
       "iconKey": "creator",
       "iconBg": "#111827",
       "date": "2025 - Present",
-      "url": "https://your-kathfoss-link",
+      "url": "https://kathfoss-link",
       "points": [
         "Lead national open-source initiatives connecting students, researchers, and industry contributors.",
         "Directed delivery of community platforms and programs with Agile execution discipline.",
@@ -198,7 +198,7 @@
       "tags": ["CatBoost", "Quant", "Time-Series"],
       "metrics": ["9 Features", "Regime Filter"],
       "className": "md:col-span-2 md:row-span-1",
-      "accent": "from-amber-500/20 via-slate-900/20 to-orange-500/20",
+      "accent": "from-cyan-500/20 via-slate-900/20 to-blue-500/20",
       "url": "https://your-nepse-project-link"
     },
     {
@@ -226,24 +226,24 @@
       {
         "id": "rag",
         "title": "Hybrid Retrieval Pipelines",
-        "description": "RAG architecture connecting market context and supporting evidence to model output."
+        "description": "RAG architecture For Custom AI Agents."
       },
       {
         "id": "data",
         "title": "Dataset Engineering",
-        "description": "Structured OHLCV and fundamentals for consistent experimentation and evaluation."
+        "description": "Structure and Feature Engineer Data for consistent experimentation and evaluation."
       }
     ],
     "cards": [
       {
         "id": "methods",
         "title": "Methods",
-        "value": "RAG, TFT, CatBoost, Evaluation"
+        "value": "RAG, Transformer,Classical ML,Gradient Boosting Algorithms, Evaluation"
       },
       {
         "id": "outcome",
         "title": "Outcome Focus",
-        "value": "Explainable and deployable AI systems"
+        "value": "Explainable,Accurate and deployable AI systems"
       }
     ]
   },
@@ -251,17 +251,34 @@
     {
       "id": "languages",
       "title": "Languages",
-      "items": ["Python", "TypeScript", "JavaScript", "SQL"]
+      "items": ["Python", "Dart", "TypeScript", "JavaScript", "SQL", "Solidity"]
     },
     {
       "id": "backend",
       "title": "Backend and Infra",
-      "items": ["FastAPI", "Django", "Node.js", "PostgreSQL", "Redis", "Docker"]
+      "items": [
+        "FastAPI",
+        "Django",
+        "Nest.js",
+        "Node.js",
+        "PostgreSQL",
+        "MongoDB",
+        "Redis",
+        "Docker"
+      ]
     },
     {
       "id": "frontend",
       "title": "Frontend and Product",
-      "items": ["React", "Next.js", "Vue.js", "Tailwind CSS", "Framer Motion"]
+      "items": [
+        "React",
+        "Flutter",
+        "Next.js",
+        "Vue.js",
+        "Tailwind CSS",
+        "MUI",
+        "Bootstrap"
+      ]
     }
   ],
   "contact": {

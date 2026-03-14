@@ -8,6 +8,7 @@ import Works from "./Works";
 import Contact from "./Contact";
 import FocusTabs from "./FocusTabs";
 import AIMLLab from "./AIMLLab";
+import Education from "./Education";
 
 export {
   Hero,
@@ -19,6 +20,7 @@ export {
   Contact,
   FocusTabs,
   AIMLLab,
+  Education,
   EarthCanvas,
   BallCanvas,
   ComputersCanvas,
