@@ -32,10 +32,15 @@ const Tech = () => {
               {group.items.map((skill, index) => (
                 <li
                   key={`${group.id}-${index}`}
-                  className="flex items-center gap-2"
+                  className="flex items-center justify-between gap-2"
                 >
-                  <span className="h-1.5 w-1.5 rounded-full bg-violet-400" />
-                  <span>{skill}</span>
+                  <div className="flex items-center gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-violet-400" />
+                    <span>{skill.name}</span>
+                  </div>
+                  <span className="text-xs text-violet-300 bg-violet-500/10 px-2 py-0.5 rounded-full border border-violet-500/20">
+                    {skill.level}
+                  </span>
                 </li>
               ))}
             </ul>

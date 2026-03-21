@@ -14,6 +14,9 @@ import Contact from "./Contact";
 import FocusTabs from "./FocusTabs";
 import AIMLLab from "./AIMLLab";
 import Education from "./Education";
+import CaseStudies from "./CaseStudies";
+import Testimonials from "./Testimonials";
+import BlogSection from "./BlogSection";
 
 export {
   Hero,
@@ -30,4 +33,7 @@ export {
   BallCanvas,
   ComputersCanvas,
   StarsCanvas,
+  CaseStudies,
+  Testimonials,
+  BlogSection,
 };

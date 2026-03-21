@@ -13,6 +13,9 @@ import {
   Tech,
   Works,
   StarsCanvas,
+  CaseStudies,
+  Testimonials,
+  BlogSection,
 } from "./components";
 
 const App = () => {
@@ -76,12 +79,24 @@ const App = () => {
           <FocusTabs />
           <Experience />
           <Works />
+          <CaseStudies />
           <AIMLLab />
           <Tech />
+          <Testimonials />
+          <BlogSection />
           <div className="relative z-0">
             <Contact />
             <StarsCanvas />
           </div>
+          <footer className="w-full text-center py-6 text-white/40 text-sm glass-card border-none rounded-none mt-10">
+            <p>
+              Last updated:{" "}
+              {new Date().toLocaleDateString("en-US", {
+                month: "long",
+                year: "numeric",
+              })}
+            </p>
+          </footer>
         </main>
       </div>
     </BrowserRouter>

@@ -1,8 +1,24 @@
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 import { styles } from "../styles";
 import { heroHighlights, insightCards, profile } from "../constants";
 import { container, item } from "../utils/motion";
+
+const TypingText = ({ text }) => {
+  const [displayText, setDisplayText] = useState("");
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      setDisplayText(text.slice(0, index));
+      index++;
+      if (index > text.length) clearInterval(interval);
+    }, 50);
+    return () => clearInterval(interval);
+  }, [text]);
+
+  return <span>{displayText}</span>;
+};
 
 const Hero = () => {
   return (
@@ -12,14 +28,14 @@ const Hero = () => {
         aria-hidden="true"
       />
       <div
-        className={`relative z-10 max-w-7xl mx-auto ${styles.paddingX} pt-28 pb-16 lg:pt-34 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] items-center`}
+        className={`relative z-10 max-w-7xl mx-auto ${styles.paddingX} pt-36 pb-24 lg:pt-48 lg:pb-32 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] items-center min-h-screen`}
       >
         <motion.div variants={container} initial="hidden" animate="show">
           <motion.p
             variants={item}
-            className="text-xs sm:text-sm uppercase tracking-[0.45em] text-white/60"
+            className="text-xs sm:text-sm uppercase tracking-[0.45em] text-white/60 h-6"
           >
-            Full-Stack + AI Engineering
+            <TypingText text="Full-Stack + AI Engineering" />
           </motion.p>
           <motion.h1 variants={item} className={`${styles.heroHeadText} mt-4`}>
             {profile.name.split(" ")[0]}{" "}
@@ -77,8 +93,27 @@ const Hero = () => {
           </motion.div>
         </motion.div>
 
-        <div className="relative">
-          <div className="glass-card rounded-3xl p-6 sm:p-8">
+        <div className="relative flex flex-col md:flex-row lg:flex-col gap-6 w-full">
+          <div className="glass-card rounded-3xl p-6 sm:p-8 flex-1 md:w-1/2 lg:w-full space-y-4 shadow-glow flex flex-col justify-center items-center relative overflow-hidden group">
+            {/* Placeholder for Photo/Animation */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-violet-500/20 to-cyan-500/20 opacity-30 group-hover:opacity-50 transition-custom" />
+            <img
+              src="/photo-placeholder.webp"
+              alt="Sahil Dangol"
+              className="w-32 h-32 md:w-48 md:h-48 rounded-full border-2 border-violet-400/50 object-cover relative z-10"
+              loading="lazy"
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src =
+                  'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white/30"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>';
+              }}
+            />
+            <p className="text-center text-sm text-white/60 relative z-10">
+              Waiting for professional photo...
+            </p>
+          </div>
+
+          <div className="glass-card rounded-3xl p-6 sm:p-8 flex-1 md:w-1/2 lg:w-full">
             <p className="text-sm text-white/60 uppercase tracking-[0.3em]">
               Key Highlights
             </p>

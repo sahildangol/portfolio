@@ -294,3 +294,31 @@ html.lenis {
       -1.8em -1.8em 0 0em #ffffff;
   }
 }
+
+/* Update global spacing and transitions */
+.transition-custom {
+  transition: all 0.3s ease;
+}
+
+.section-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.hover-card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.hover-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 24px 50px rgba(192, 132, 252, 0.15); /* Purple shadow */
+  z-index: 10;
+}

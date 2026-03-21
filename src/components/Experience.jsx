@@ -11,6 +11,7 @@ import { textVariant } from "../utils/motion";
 
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
+    className="hover-card"
     contentStyle={{ background: "#0F131C", color: "#fff" }}
     contentArrowStyle={{ borderRight: "7px solid #0F131C" }}
     date={experience.date}

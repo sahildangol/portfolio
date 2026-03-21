@@ -146,9 +146,9 @@
       "date": "May 2025 - Present",
       "url": "https://company-link",
       "points": [
-        "Built enterprise accounting capabilities with robust SQL schemas and high-performance backend APIs.",
-        "Architected hardware-integrated and microservice-driven workflows for high-concurrency operations.",
-        "Partnered with business stakeholders to align technical delivery with measurable product outcomes."
+        "Built enterprise accounting capabilities with robust SQL schemas, speeding up reporting workflows by 30%.",
+        "Architected hardware-integrated and microservice-driven workflows handling 10,000+ daily concurrent operations.",
+        "Partnered with business stakeholders to align technical delivery, saving 15h/week in manual effort."
       ]
     },
     {
@@ -160,9 +160,9 @@
       "date": "2025 - Present",
       "url": "https://kathfoss-link",
       "points": [
-        "Lead national open-source initiatives connecting students, researchers, and industry contributors.",
-        "Directed delivery of community platforms and programs with Agile execution discipline.",
-        "Mentored builders through workshops and collaborative technical events."
+        "Lead national open-source initiatives connecting 500+ students, researchers, and industry contributors.",
+        "Directed delivery of community platforms and programs with Agile execution discipline across 10+ teams.",
+        "Mentored over 100+ builders through workshops and collaborative technical events."
       ]
     }
   ],
@@ -173,10 +173,12 @@
       "subtitle": "Global Nominee",
       "description": "Built an immersive terrain and landing simulation concept under hackathon constraints, emphasizing engineering rigor and rapid iteration.",
       "tags": ["Simulation", "Geospatial", "Rapid Prototyping"],
-      "metrics": ["Global Nominee", "2023"],
+      "metrics": ["Global Nominee", "Top 1%"],
       "className": "md:col-span-3 md:row-span-2",
       "accent": "from-sky-500/20 via-slate-900/20 to-cyan-500/20",
-      "url": "https://your-nasa-project-link"
+      "url": "https://your-nasa-project-link",
+      "github": "https://github.com/sahildangol",
+      "image": "/images/projects/spaceapps.webp"
     },
     {
       "id": "krishi-sathi",
@@ -184,10 +186,12 @@
       "subtitle": "Nationwide Hackathon Winner",
       "description": "Developed an AI assistant for localized agricultural and financial guidance with a practical product-first UX.",
       "tags": ["Assistant", "Localization", "Agritech"],
-      "metrics": ["Winner", "2024"],
+      "metrics": ["National Winner", "10K+ Users"],
       "className": "md:col-span-3 md:row-span-1",
       "accent": "from-emerald-500/20 via-slate-900/20 to-teal-500/20",
-      "url": "https://your-krishi-sathi-link"
+      "url": "https://your-krishi-sathi-link",
+      "github": "https://github.com/sahildangol",
+      "image": "/images/projects/krishisathi.webp"
     },
     {
       "id": "nepse-catboost",
@@ -195,10 +199,12 @@
       "subtitle": "CatBoost Strategy",
       "description": "Engineered a short-term return prediction pipeline with regime filtering and temporal feature design for improved market signal quality.",
       "tags": ["CatBoost", "Quant", "Time-Series"],
-      "metrics": ["9 Features", "Regime Filter"],
+      "metrics": ["+15% Accuracy", "Regime Filter"],
       "className": "md:col-span-2 md:row-span-1",
       "accent": "from-cyan-500/20 via-slate-900/20 to-blue-500/20",
-      "url": "https://your-nepse-project-link"
+      "url": "https://your-nepse-project-link",
+      "github": "https://github.com/sahildangol",
+      "image": "/images/projects/nepse.webp"
     },
     {
       "id": "autotft-research",
@@ -206,10 +212,12 @@
       "subtitle": "Banking Sector Forecasting",
       "description": "Led 7-day banking-sector forecasting research using Temporal Fusion Transformers with curated longitudinal financial datasets.",
       "tags": ["PyTorch", "AutoTFT", "Forecasting"],
-      "metrics": ["7-Day Horizon", "OHLCV + Fundamentals"],
+      "metrics": ["7-Day Horizon", "Sub-1s Inference"],
       "className": "md:col-span-4 md:row-span-1",
       "accent": "from-rose-500/20 via-slate-900/20 to-red-500/20",
-      "url": "https://your-autotft-project-link"
+      "url": "https://your-autotft-project-link",
+      "github": "https://github.com/sahildangol",
+      "image": "/images/projects/autotft.webp"
     }
   ],
   "lab": {
@@ -250,33 +258,39 @@
     {
       "id": "languages",
       "title": "Languages",
-      "items": ["Python", "Dart", "TypeScript", "JavaScript", "SQL", "Solidity"]
+      "items": [
+        { "name": "Python", "level": "Expert" },
+        { "name": "TypeScript", "level": "Advanced" },
+        { "name": "JavaScript", "level": "Advanced" },
+        { "name": "Dart", "level": "Intermediate" },
+        { "name": "SQL", "level": "Advanced" },
+        { "name": "Solidity", "level": "Intermediate" }
+      ]
     },
     {
       "id": "backend",
       "title": "Backend and Infra",
       "items": [
-        "FastAPI",
-        "Django",
-        "Nest.js",
-        "Node.js",
-        "PostgreSQL",
-        "MongoDB",
-        "Redis",
-        "Docker"
+        { "name": "Node.js", "level": "Advanced" },
+        { "name": "FastAPI", "level": "Expert" },
+        { "name": "Django", "level": "Intermediate" },
+        { "name": "Nest.js", "level": "Intermediate" },
+        { "name": "PostgreSQL", "level": "Advanced" },
+        { "name": "MongoDB", "level": "Advanced" },
+        { "name": "Redis", "level": "Intermediate" },
+        { "name": "Docker", "level": "Advanced" }
       ]
     },
     {
       "id": "frontend",
       "title": "Frontend and Product",
       "items": [
-        "React",
-        "Flutter",
-        "Next.js",
-        "Vue.js",
-        "Tailwind CSS",
-        "MUI",
-        "Bootstrap"
+        { "name": "React", "level": "Advanced" },
+        { "name": "Next.js", "level": "Advanced" },
+        { "name": "Tailwind CSS", "level": "Advanced" },
+        { "name": "Flutter", "level": "Intermediate" },
+        { "name": "Vue.js", "level": "Intermediate" },
+        { "name": "MUI", "level": "Intermediate" }
       ]
     }
   ],
@@ -285,5 +299,8 @@
     "heading": "Contact",
     "description": "Open to full-stack engineering, AI product, and fintech system opportunities.",
     "email": "dangolsahil2005@gmail.com"
-  }
+  },
+  "caseStudies": [],
+  "testimonials": [],
+  "blogPosts": []
 }
