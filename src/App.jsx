@@ -3,7 +3,6 @@ import { BrowserRouter } from "react-router-dom";
 import Lenis from "lenis";
 import {
   About,
-  AIMLLab,
   Contact,
   Education,
   Experience,
@@ -84,7 +83,6 @@ const App = () => {
           <Tech />
           <Experience />
           <Works />
-          <AIMLLab />
           <div className="relative z-0">
             <Contact />
             <StarsCanvas />

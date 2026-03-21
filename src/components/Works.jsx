@@ -26,30 +26,8 @@ const Works = () => {
                 aria-hidden="true"
               />
               <div className="relative z-10 flex h-full flex-col justify-between">
-                <div className="space-y-3">
-                  <div className="w-full h-48 sm:h-56 overflow-hidden rounded-xl border border-white/10 relative group-hover:border-[var(--purple-primary)]/30 transition-colors duration-300">
-                    {project.image ? (
-                      <>
-                        <img
-                          src={project.image}
-                          alt={project.title}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                          loading="lazy"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#0A0E1A] to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-300 flex items-end p-6">
-                          <span className="text-white font-medium flex items-center gap-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                            View Details{" "}
-                            <span className="text-[var(--cyan-accent)]">→</span>
-                          </span>
-                        </div>
-                      </>
-                    ) : (
-                      <div className="w-full h-full bg-white/5 flex items-center justify-center text-white/30 text-xs text-center px-4">
-                        Image Placeholder
-                      </div>
-                    )}
-                  </div>
-                  <p className="text-xs uppercase tracking-[0.35em] text-white/60 mt-4">
+                <div className="space-y-4 pt-2">
+                  <p className="text-xs uppercase tracking-[0.35em] text-[var(--cyan-accent)]/80 font-mono">
                     {project.subtitle}
                   </p>
                   <h3 className="text-2xl sm:text-3xl text-white font-display">

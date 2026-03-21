@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import sahilImg from "../assets/company/sahil.jpeg";
 
 import { styles } from "../styles";
 import { heroHighlights, insightCards, profile } from "../constants";
@@ -37,7 +38,7 @@ const Hero = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-accent opacity-75"></span>
               <span className="relative inline-flex rounded-full h-3 w-3 bg-green-accent"></span>
             </span>
-            <span className="text-sm font-medium tracking-wider text-green-accent uppercase drop-shadow-[0_0_8px_rgba(16,185,129,0.5)]">
+            <span className="text-sm font-medium tracking-wider text-[#10ff9f] uppercase drop-shadow-[0_0_10px_rgba(16,255,159,0.8)]">
               Available for Hire
             </span>
           </motion.div>
@@ -71,10 +72,12 @@ const Hero = () => {
                 key={text}
                 variants={item}
                 className={`glass-card hover-card rounded-xl px-4 py-3 leading-[1.7] flex items-center gap-3 ${
-                  text.includes("2+ years") ? "font-medium text-white" : ""
+                  text.includes("2+ years")
+                    ? "font-medium text-[var(--cyan-accent)]"
+                    : ""
                 }`}
               >
-                <span className="text-[var(--purple-primary)]">✨</span>
+                <div className="h-2 w-2 rounded-full bg-[var(--purple-primary)] flex-shrink-0" />
                 {text}
               </motion.li>
             ))}
@@ -101,10 +104,9 @@ const Hero = () => {
             </motion.a>
             <motion.a
               href="#contact"
-              className="group inline-flex items-center justify-center px-4 py-3.5 text-sm font-semibold text-[var(--purple-primary)] hover:text-[var(--cyan-accent)] transition-colors relative"
+              className="group inline-flex items-center justify-center rounded-full bg-[var(--green-accent)] text-[#0A0E1A] px-8 py-3.5 text-sm font-bold hover:bg-[#10b981] transition-all shadow-[0_0_20px_rgba(16,185,129,0.4)]"
             >
               Contact Me
-              <span className="absolute bottom-2 left-4 right-4 h-[2px] bg-[var(--cyan-accent)] scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300 ease-out"></span>
             </motion.a>
           </motion.div>
         </motion.div>
@@ -116,13 +118,13 @@ const Hero = () => {
           className="relative flex flex-col items-center justify-center w-full"
         >
           {/* 400x400 Circular Photo Container with rotating border */}
-          <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-full gradient-border-rotate profile-glow z-10 p-1 flex-shrink-0 mb-6 lg:mb-12">
+          <div className="relative w-[240px] h-[240px] sm:w-[320px] sm:h-[320px] rounded-full gradient-border-rotate profile-glow z-10 p-1 flex-shrink-0 mb-6 lg:mb-12">
             <div className="w-full h-full rounded-full overflow-hidden bg-[var(--bg-secondary)] relative group">
               <div className="absolute inset-0 bg-gradient-to-tr from-[var(--purple-primary)]/20 to-[var(--cyan-accent)]/20 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-500 z-20"></div>
               <img
-                src="/profile.jpg"
+                src={sahilImg}
                 alt="Sahil Dangol"
-                className="w-full h-full object-cover relative z-10 transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-full object-cover relative z-10 transition-transform duration-700 group-hover:scale-110"
                 onError={(e) => {
                   e.target.onerror = null;
                   e.target.src = "/profile.png";
@@ -131,39 +133,18 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="glass-card rounded-3xl p-6 sm:p-8 flex-1 md:w-1/2 lg:w-full">
-            <p className="text-sm text-white/60 uppercase tracking-[0.3em]">
-              Key Highlights
-            </p>
-            <div className="mt-6 grid gap-4">
-              {insightCards.map((card) => (
-                <div
-                  key={card.id}
-                  className="rounded-2xl border border-white/10 bg-white/5 p-4"
-                >
-                  <div className="flex items-center justify-between gap-3">
-                    <p className="text-white font-display">{card.title}</p>
-                    <span className="rounded-full border border-violet-300/45 px-2 py-1 text-[10px] font-mono tracking-[0.2em] text-violet-200">
-                      {card.badge}
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-6 flex flex-wrap gap-2">
-              {profile.socialLinks.map((link) => (
-                <a
-                  key={link.id}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-full border border-white/15 px-3 py-1.5 text-xs text-white/70 transition hover:text-white"
-                >
-                  {link.label}
-                </a>
-              ))}
-            </div>
+          <div className="flex flex-wrap gap-2 text-center lg:text-left justify-center lg:justify-start">
+            {profile.socialLinks.map((link) => (
+              <a
+                key={link.id}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full border border-white/15 px-4 py-2 text-xs sm:text-sm shadow-sm text-white/70 transition hover:text-white hover:bg-white/5"
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
         </motion.div>
       </div>

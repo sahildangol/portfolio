@@ -29,10 +29,10 @@ const FocusTabs = () => {
               type="button"
               onClick={() => setActiveId(tab.id)}
               id={`tab-${tab.id}`}
-              className={`relative overflow-hidden rounded-full px-5 py-2 text-sm font-semibold transition ${
+              className={`relative overflow-hidden rounded-full px-6 py-3 text-base sm:text-lg font-semibold transition ${
                 isActive
                   ? "text-stealth-900"
-                  : "text-white/70 border border-white/15"
+                  : "text-white/70 border border-white/20 hover:text-white hover:bg-white/5"
               }`}
               role="tab"
               aria-selected={isActive}
@@ -65,13 +65,13 @@ const FocusTabs = () => {
           id={`panel-${activeTab.id}`}
           role="tabpanel"
           aria-labelledby={`tab-${activeTab.id}`}
-          className="glass-card mt-8 rounded-2xl p-6"
+          className="glass-card mt-10 rounded-3xl p-8 sm:p-10"
         >
           <motion.ul
             variants={container}
             initial="hidden"
             animate="show"
-            className="grid gap-3 text-sm text-white/70"
+            className="grid gap-5 text-base sm:text-lg text-[var(--text-secondary)]"
           >
             {activeTab.points.map((point, index) => (
               <motion.li

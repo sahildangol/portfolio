@@ -28,25 +28,17 @@ const About = () => {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-[var(--purple-primary)]/10 to-[var(--cyan-accent)]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-0"></div>
 
-            <div className="relative z-10 w-full">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl border border-white/10 bg-white/5 flex items-center justify-center overflow-hidden mb-6 shadow-glow transition-transform duration-300 group-hover:scale-110">
-                <img
-                  src={service.icon}
-                  alt={service.title}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-
-              <h3 className="text-white text-xl sm:text-2xl font-display font-semibold">
+            <div className="relative z-10 w-full h-full flex flex-col justify-center">
+              <h3 className="text-white text-2xl sm:text-3xl font-display font-bold leading-tight relative inline-block">
                 {service.title}
+                <span className="block mt-4 w-12 h-1 bg-[var(--cyan-accent)] rounded-full group-hover:w-24 transition-all duration-500 ease-out"></span>
               </h3>
-            </div>
 
-            <div className="relative z-10 mt-4 overflow-hidden h-full">
-              <p className="text-[var(--text-secondary)] text-[15px] leading-[1.7] transform transition-transform duration-300">
-                {service.description}
-              </p>
+              <div className="mt-6">
+                <p className="text-[var(--text-secondary)] text-base sm:text-lg leading-[1.8] font-light">
+                  {service.description}
+                </p>
+              </div>
             </div>
           </motion.article>
         ))}

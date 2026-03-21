@@ -14,6 +14,8 @@ const Contact = () => {
     name: "",
     email: "",
     message: "",
+    date: "",
+    time: "",
   });
 
   const [loading, setLoading] = useState(false);
@@ -32,6 +34,15 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
+    const formattedMessage = `
+Message: ${form.message}
+
+---
+Requested Meeting Details:
+Date: ${form.date || "Not specified"}
+Time: ${form.time || "Not specified"}
+    `.trim();
+
     emailjs
       .send(
         "service_bdnuyyf",
@@ -41,7 +52,7 @@ const Contact = () => {
           to_name: "Sahil",
           from_email: form.email,
           to_email: "dangolsahil2005@gmail.com",
-          message: form.message,
+          message: formattedMessage,
         },
         "laoHISU5t80X4h04C",
       )
@@ -54,6 +65,8 @@ const Contact = () => {
             name: "",
             email: "",
             message: "",
+            date: "",
+            time: "",
           });
         },
         (error) => {
@@ -126,6 +139,30 @@ const Contact = () => {
               className="rounded-xl border border-white/5 bg-[var(--bg-primary)]/50 px-5 py-4 text-base text-[var(--text-primary)] outline-none placeholder:text-white/30 focus:border-[var(--cyan-accent)] focus:shadow-[0_0_15px_rgba(34,211,238,0.15)] transition-all"
             />
           </label>
+          <label className="flex flex-col sm:col-span-1">
+            <span className="text-[var(--text-primary)] font-medium mb-3 text-base">
+              Meeting Date (Optional)
+            </span>
+            <input
+              type="date"
+              name="date"
+              value={form.date}
+              onChange={handleChange}
+              className="rounded-xl border border-white/5 bg-[var(--bg-primary)]/50 px-5 py-4 text-base text-[var(--text-primary)] outline-none focus:border-[var(--cyan-accent)] focus:shadow-[0_0_15px_rgba(34,211,238,0.15)] transition-all color-scheme-dark"
+            />
+          </label>
+          <label className="flex flex-col sm:col-span-1">
+            <span className="text-[var(--text-primary)] font-medium mb-3 text-base">
+              Meeting Time (Optional)
+            </span>
+            <input
+              type="time"
+              name="time"
+              value={form.time}
+              onChange={handleChange}
+              className="rounded-xl border border-white/5 bg-[var(--bg-primary)]/50 px-5 py-4 text-base text-[var(--text-primary)] outline-none focus:border-[var(--cyan-accent)] focus:shadow-[0_0_15px_rgba(34,211,238,0.15)] transition-all color-scheme-dark"
+            />
+          </label>
           <label className="flex flex-col sm:col-span-2">
             <span className="text-[var(--text-primary)] font-medium mb-3 text-base">
               Your Message
@@ -141,21 +178,14 @@ const Contact = () => {
             />
           </label>
 
-          <div className="sm:col-span-2 flex flex-col sm:flex-row gap-4 mt-2">
+          <div className="mt-2">
             <button
               type="submit"
               disabled={loading}
-              className="btn-primary flex-1 bg-[var(--purple-primary)] text-white py-4 px-10 rounded-xl outline-none font-semibold shadow-[0_0_20px_rgba(167,139,250,0.3)] text-base disabled:opacity-70"
+              className="btn-primary w-full sm:w-auto bg-[var(--purple-primary)] text-white py-4 px-10 rounded-xl outline-none font-semibold shadow-[0_0_20px_rgba(167,139,250,0.3)] text-base disabled:opacity-70 transition-all"
             >
               {loading ? "Sending..." : "Send Message"}
             </button>
-
-            <a
-              href={`mailto:${contactInfo.email}?subject=Meeting%20Request&body=Hi%20Sahil,%0A%0AI'd%20like%20to%20schedule%20a%20meeting%20with%20you.%20Are%20you%20available%20on...`}
-              className="btn-secondary flex-1 inline-flex items-center justify-center border border-[var(--cyan-accent)]/50 bg-[var(--cyan-accent)]/10 text-[var(--cyan-accent)] py-4 px-10 rounded-xl outline-none font-semibold shadow-[0_0_20px_rgba(34,211,238,0.15)] text-base transition-all hover:bg-[var(--cyan-accent)] hover:text-[#0A0E1A]"
-            >
-              <span className="mr-2">📅</span> Schedule a Meeting
-            </a>
           </div>
         </form>
       </motion.div>
