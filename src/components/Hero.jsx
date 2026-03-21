@@ -22,95 +22,113 @@ const TypingText = ({ text }) => {
 
 const Hero = () => {
   return (
-    <section className="relative w-full min-h-screen overflow-hidden">
+    <section className="relative w-full min-h-screen pt-24 pb-8 sm:pt-[80px] sm:pb-[120px] overflow-hidden">
       <div
-        className="absolute inset-0 stealth-grid opacity-15"
-        aria-hidden="true"
-      />
-      <div
-        className={`relative z-10 max-w-7xl mx-auto ${styles.paddingX} pt-36 pb-24 lg:pt-48 lg:pb-32 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] items-center min-h-screen`}
+        className={`relative z-10 max-w-7xl mx-auto px-6 sm:px-12 grid gap-16 lg:gap-24 lg:grid-cols-[1fr_400px] items-start pt-4 sm:pt-12 min-h-[calc(100vh-200px)]`}
       >
-        <motion.div variants={container} initial="hidden" animate="show">
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
+          <motion.div variants={item} className="mb-6 flex items-center gap-3">
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-accent opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-green-accent"></span>
+            </span>
+            <span className="text-sm font-medium tracking-wider text-green-accent uppercase drop-shadow-[0_0_8px_rgba(16,185,129,0.5)]">
+              Available for Hire
+            </span>
+          </motion.div>
           <motion.p
             variants={item}
             className="text-xs sm:text-sm uppercase tracking-[0.45em] text-white/60 h-6"
           >
             <TypingText text="Full-Stack + AI Engineering" />
           </motion.p>
-          <motion.h1 variants={item} className={`${styles.heroHeadText} mt-4`}>
+          <motion.h1
+            variants={item}
+            className="font-display font-bold text-5xl sm:text-6xl md:text-[72px] leading-[1.1] tracking-tight mt-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
+          >
             {profile.name.split(" ")[0]}{" "}
-            <span className="text-violet-300 text-glow">
+            <span className="text-transparent bg-clip-text bg-gradient-to-br from-[#F8FAFC] to-[#A78BFA]">
               {profile.name.split(" ").slice(1).join(" ")}
             </span>
           </motion.h1>
-          <motion.p variants={item} className={`${styles.heroSubText} mt-6`}>
-            {profile.role}
+          <motion.p
+            variants={item}
+            className="mt-6 text-lg sm:text-xl text-[var(--text-secondary)] font-body max-w-2xl leading-[1.7]"
+          >
+            {profile.tagline}
           </motion.p>
           <motion.ul
             variants={container}
-            className="mt-8 grid gap-3 sm:grid-cols-2 text-sm text-white/80"
+            className="mt-8 grid gap-4 sm:grid-cols-2 text-sm text-[var(--text-secondary)]"
           >
             {heroHighlights.map((text) => (
               <motion.li
                 key={text}
                 variants={item}
-                className={`glass-card rounded-xl px-4 py-3 leading-relaxed ${
-                  text.includes("2+ years") ? "font-bold text-white" : ""
+                className={`glass-card hover-card rounded-xl px-4 py-3 leading-[1.7] flex items-center gap-3 ${
+                  text.includes("2+ years") ? "font-medium text-white" : ""
                 }`}
               >
+                <span className="text-[var(--purple-primary)]">✨</span>
                 {text}
               </motion.li>
             ))}
           </motion.ul>
 
-          <motion.div variants={item} className="mt-10 flex flex-wrap gap-4">
+          <motion.div
+            variants={item}
+            className="mt-10 flex flex-wrap gap-4 items-center"
+          >
             <motion.a
               href={profile.cvUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-white text-stealth-900 px-6 py-3 text-sm font-semibold shadow-glow"
-              whileHover={{ y: -2 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              className="btn-primary inline-flex items-center justify-center rounded-full bg-[var(--purple-primary)] text-white px-8 py-3.5 text-sm font-semibold shadow-[0_0_20px_rgba(167,139,250,0.3)] transition-all overflow-hidden relative group"
             >
+              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></span>
               View CV
             </motion.a>
             <motion.a
               href="#projects"
-              className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white/80 hover:text-white"
-              whileHover={{ y: -2 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              className="btn-secondary inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 backdrop-blur-md px-8 py-3.5 text-sm font-semibold text-[var(--text-secondary)] hover:text-white transition-all shadow-sm"
             >
               View Projects
             </motion.a>
             <motion.a
               href="#contact"
-              className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white/80 hover:text-white"
-              whileHover={{ y: -2 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              className="group inline-flex items-center justify-center px-4 py-3.5 text-sm font-semibold text-[var(--purple-primary)] hover:text-[var(--cyan-accent)] transition-colors relative"
             >
               Contact Me
+              <span className="absolute bottom-2 left-4 right-4 h-[2px] bg-[var(--cyan-accent)] scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300 ease-out"></span>
             </motion.a>
           </motion.div>
         </motion.div>
 
-        <div className="relative flex flex-col md:flex-row lg:flex-col gap-6 w-full">
-          <div className="glass-card rounded-3xl p-6 sm:p-8 flex-1 md:w-1/2 lg:w-full space-y-4 shadow-glow flex flex-col justify-center items-center relative overflow-hidden group">
-            {/* Placeholder for Photo/Animation */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-violet-500/20 to-cyan-500/20 opacity-30 group-hover:opacity-50 transition-custom" />
-            <img
-              src="/photo-placeholder.webp"
-              alt="Sahil Dangol"
-              className="w-32 h-32 md:w-48 md:h-48 rounded-full border-2 border-violet-400/50 object-cover relative z-10"
-              loading="lazy"
-              onError={(e) => {
-                e.target.onerror = null;
-                e.target.src =
-                  'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white/30"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>';
-              }}
-            />
-            <p className="text-center text-sm text-white/60 relative z-10">
-              Waiting for professional photo...
-            </p>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95, rotate: 2 }}
+          animate={{ opacity: 1, scale: 1, rotate: 0 }}
+          transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1], delay: 0.4 }}
+          className="relative flex flex-col items-center justify-center w-full"
+        >
+          {/* 400x400 Circular Photo Container with rotating border */}
+          <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-full gradient-border-rotate profile-glow z-10 p-1 flex-shrink-0 mb-6 lg:mb-12">
+            <div className="w-full h-full rounded-full overflow-hidden bg-[var(--bg-secondary)] relative group">
+              <div className="absolute inset-0 bg-gradient-to-tr from-[var(--purple-primary)]/20 to-[var(--cyan-accent)]/20 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-500 z-20"></div>
+              <img
+                src="/profile.jpg"
+                alt="Sahil Dangol"
+                className="w-full h-full object-cover relative z-10 transition-transform duration-700 group-hover:scale-105"
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = "/profile.png";
+                }}
+              />
+            </div>
           </div>
 
           <div className="glass-card rounded-3xl p-6 sm:p-8 flex-1 md:w-1/2 lg:w-full">
@@ -147,7 +165,7 @@ const Hero = () => {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -11,9 +11,15 @@ import { textVariant } from "../utils/motion";
 
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
-    className="hover-card"
-    contentStyle={{ background: "#0F131C", color: "#fff" }}
-    contentArrowStyle={{ borderRight: "7px solid #0F131C" }}
+    className="vertical-timeline-element--work group"
+    contentStyle={{
+      background: "var(--bg-secondary)",
+      color: "var(--text-primary)",
+      border: "1px solid rgba(255,255,255,0.05)",
+      boxShadow: "0 10px 30px rgba(0,0,0,0.2)",
+      borderRadius: "24px",
+    }}
+    contentArrowStyle={{ borderRight: "7px solid var(--bg-secondary)" }}
     date={experience.date}
     iconStyle={{ background: experience.iconBg }}
     icon={
@@ -27,22 +33,30 @@ const ExperienceCard = ({ experience }) => (
     }
   >
     <div>
-      <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
+      <div className="flex items-center justify-between gap-4 flex-wrap">
+        <h3 className="text-[var(--text-primary)] text-xl sm:text-2xl font-display font-semibold group-hover:text-[var(--cyan-accent)] transition-colors">
+          {experience.title}
+        </h3>
+        {experience.title.includes("Current") && (
+          <span className="inline-flex rounded-full border border-[var(--green-accent)]/30 bg-[var(--green-accent)]/10 px-2.5 py-0.5 font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-[var(--green-accent)]">
+            Current
+          </span>
+        )}
+      </div>
       <a
         href={experience.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-secondary text-[16px] font-semibold"
-        style={{ margin: 0 }}
+        className="text-[var(--purple-primary)] text-[15px] font-medium mt-1 inline-block"
       >
         {experience.company_name}
       </a>
     </div>
-    <ul className="mt-5 list-disc ml-5 space-y-2">
+    <ul className="mt-6 list-disc ml-5 space-y-3">
       {experience.points.map((point, index) => (
         <li
           key={`${experience.id}-point-${index}`}
-          className="text-white/70 text-[14px] pl-1 tracking-wider"
+          className="text-[var(--text-secondary)] text-[14px] leading-[1.7] pl-1"
         >
           {point}
         </li>

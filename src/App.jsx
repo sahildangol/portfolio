@@ -13,9 +13,6 @@ import {
   Tech,
   Works,
   StarsCanvas,
-  CaseStudies,
-  Testimonials,
-  BlogSection,
 } from "./components";
 
 const App = () => {
@@ -67,7 +64,14 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <div className="stealth-bg min-h-screen text-white">
+      <div className="min-h-screen text-[var(--text-secondary)] font-body relative overflow-x-hidden w-full selection:bg-cyan-500/30">
+        <div className="animated-mesh-bg">
+          <div className="orb orb-1"></div>
+          <div className="orb orb-2"></div>
+          <div className="orb orb-3"></div>
+          <div className="orb orb-4"></div>
+          <div className="orb orb-5"></div>
+        </div>
         <a href="#main" className="sr-only focus:not-sr-only">
           Skip to main content
         </a>
@@ -77,13 +81,10 @@ const App = () => {
           <About />
           <Education />
           <FocusTabs />
+          <Tech />
           <Experience />
           <Works />
-          <CaseStudies />
           <AIMLLab />
-          <Tech />
-          <Testimonials />
-          <BlogSection />
           <div className="relative z-0">
             <Contact />
             <StarsCanvas />

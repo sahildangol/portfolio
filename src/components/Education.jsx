@@ -13,19 +13,26 @@ const Education = () => {
         <h2 className={styles.sectionHeadText}>Education.</h2>
       </motion.div>
 
-      <div className="mt-8 space-y-5">
+      <div className="mt-16 grid gap-16 md:gap-20">
         {about.credentials.map((credential) => {
           const isPrimary = credential.id === "education";
 
           return (
             <div
               key={credential.id}
-              className={`glass-card rounded-2xl border p-6 transition ${
+              className={`glass-card hover-card rounded-3xl border p-8 sm:p-10 transition-all ${
                 isPrimary
-                  ? "border-cyan-300/55 bg-cyan-500/10 shadow-glow"
-                  : "border-white/10"
+                  ? "border-[var(--blue-accent)]/30 shadow-[0_0_30px_rgba(59,130,246,0.1)] relative overflow-hidden"
+                  : "border-white/5"
               }`}
             >
+              {isPrimary && (
+                <div className="absolute top-0 right-0 p-4">
+                  <span className="inline-flex rounded-full border border-[var(--cyan-accent)]/30 bg-[var(--cyan-accent)]/10 px-3 py-1 font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-[var(--cyan-accent)]">
+                    Current Degree
+                  </span>
+                </div>
+              )}
               {isPrimary && (
                 <p className="text-[10px] uppercase tracking-[0.28em] text-cyan-100/90">
                   Education
@@ -40,26 +47,24 @@ const Education = () => {
                 {credential.title}
               </p>
               <p
-                className={`mt-3 font-display ${
-                  isPrimary ? "text-xl text-white" : "text-white"
+                className={`mt-4 font-display font-medium ${
+                  isPrimary
+                    ? "text-2xl sm:text-3xl text-[var(--text-primary)]"
+                    : "text-xl sm:text-2xl text-[var(--text-primary)]"
                 }`}
               >
                 {credential.name}
               </p>
               {credential.description && (
                 <p
-                  className={`mt-2 text-sm ${
-                    isPrimary ? "text-white/85" : "text-white/65"
+                  className={`mt-4 text-[15px] leading-[1.7] max-w-2xl ${
+                    isPrimary
+                      ? "text-[var(--text-secondary)]"
+                      : "text-[var(--text-tertiary)]"
                   }`}
                 >
                   {credential.description}
                 </p>
-              )}
-
-              {isPrimary && (
-                <span className="mt-4 inline-flex rounded-full border border-cyan-200/50 bg-cyan-300/20 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-cyan-100">
-                  Current Degree
-                </span>
               )}
             </div>
           );

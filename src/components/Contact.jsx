@@ -71,8 +71,16 @@ const Contact = () => {
         variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[0.95] glass-card rounded-3xl p-8 sm:p-10 lg:p-12"
       >
-        <p className={styles.sectionSubText}>{contactInfo.sectionLabel}</p>
-        <h3 className={styles.sectionHeadText}>{contactInfo.heading}</h3>
+        <div className="flex items-center gap-4 mb-2">
+          <p className={styles.sectionSubText}>{contactInfo.sectionLabel}</p>
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-[var(--green-accent)]/30 bg-[var(--green-accent)]/10 px-2.5 py-0.5 text-[11px] font-medium text-[var(--green-accent)]">
+            <span className="h-1.5 w-1.5 rounded-full bg-[var(--green-accent)] animate-pulse"></span>
+            Open for Freelance
+          </span>
+        </div>
+        <h3 className="text-[var(--text-primary)] font-display font-bold text-4xl sm:text-5xl">
+          {contactInfo.heading}
+        </h3>
         <p className="mt-4 max-w-2xl text-sm sm:text-base text-white/70">
           {contactInfo.description}
         </p>
@@ -89,7 +97,7 @@ const Contact = () => {
           className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-7"
         >
           <label className="flex flex-col sm:col-span-1">
-            <span className="text-white font-medium mb-3 text-base">
+            <span className="text-[var(--text-primary)] font-medium mb-3 text-base">
               Your Name
             </span>
             <input
@@ -100,11 +108,11 @@ const Contact = () => {
               placeholder="Enter your full name"
               autoComplete="name"
               required
-              className="rounded-xl border border-white/10 bg-white/5 px-5 py-4 text-base text-white outline-none placeholder:text-white/40 focus:border-violet-300/70"
+              className="rounded-xl border border-white/5 bg-[var(--bg-primary)]/50 px-5 py-4 text-base text-[var(--text-primary)] outline-none placeholder:text-white/30 focus:border-[var(--cyan-accent)] focus:shadow-[0_0_15px_rgba(34,211,238,0.15)] transition-all"
             />
           </label>
           <label className="flex flex-col sm:col-span-1">
-            <span className="text-white font-medium mb-3 text-base">
+            <span className="text-[var(--text-primary)] font-medium mb-3 text-base">
               Your Email
             </span>
             <input
@@ -115,11 +123,11 @@ const Contact = () => {
               placeholder="Enter your email"
               autoComplete="email"
               required
-              className="rounded-xl border border-white/10 bg-white/5 px-5 py-4 text-base text-white outline-none placeholder:text-white/40 focus:border-violet-300/70"
+              className="rounded-xl border border-white/5 bg-[var(--bg-primary)]/50 px-5 py-4 text-base text-[var(--text-primary)] outline-none placeholder:text-white/30 focus:border-[var(--cyan-accent)] focus:shadow-[0_0_15px_rgba(34,211,238,0.15)] transition-all"
             />
           </label>
           <label className="flex flex-col sm:col-span-2">
-            <span className="text-white font-medium mb-3 text-base">
+            <span className="text-[var(--text-primary)] font-medium mb-3 text-base">
               Your Message
             </span>
             <textarea
@@ -129,18 +137,26 @@ const Contact = () => {
               onChange={handleChange}
               placeholder="Tell me about your project, role, or collaboration idea"
               required
-              className="min-h-44 rounded-xl border border-white/10 bg-white/5 px-5 py-4 text-base text-white outline-none placeholder:text-white/40 focus:border-violet-300/70"
+              className="resize-none min-h-44 rounded-xl border border-white/5 bg-[var(--bg-primary)]/50 px-5 py-4 text-base text-[var(--text-primary)] outline-none placeholder:text-white/30 focus:border-[var(--cyan-accent)] focus:shadow-[0_0_15px_rgba(34,211,238,0.15)] transition-all"
             />
           </label>
 
-          <motion.button
-            type="submit"
-            className="sm:col-span-2 bg-violet-300 text-stealth-900 py-3.5 px-10 rounded-xl outline-none w-fit font-semibold shadow-glow text-base"
-            whileHover={{ y: -2 }}
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
-          >
-            {loading ? "Sending..." : "Send"}
-          </motion.button>
+          <div className="sm:col-span-2 flex flex-col sm:flex-row gap-4 mt-2">
+            <button
+              type="submit"
+              disabled={loading}
+              className="btn-primary flex-1 bg-[var(--purple-primary)] text-white py-4 px-10 rounded-xl outline-none font-semibold shadow-[0_0_20px_rgba(167,139,250,0.3)] text-base disabled:opacity-70"
+            >
+              {loading ? "Sending..." : "Send Message"}
+            </button>
+
+            <a
+              href={`mailto:${contactInfo.email}?subject=Meeting%20Request&body=Hi%20Sahil,%0A%0AI'd%20like%20to%20schedule%20a%20meeting%20with%20you.%20Are%20you%20available%20on...`}
+              className="btn-secondary flex-1 inline-flex items-center justify-center border border-[var(--cyan-accent)]/50 bg-[var(--cyan-accent)]/10 text-[var(--cyan-accent)] py-4 px-10 rounded-xl outline-none font-semibold shadow-[0_0_20px_rgba(34,211,238,0.15)] text-base transition-all hover:bg-[var(--cyan-accent)] hover:text-[#0A0E1A]"
+            >
+              <span className="mr-2">📅</span> Schedule a Meeting
+            </a>
+          </div>
         </form>
       </motion.div>
 

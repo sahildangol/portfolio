@@ -27,23 +27,35 @@ const Tech = () => {
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
             className="glass-card rounded-2xl p-6"
           >
-            <h3 className="text-white font-display text-lg">{group.title}</h3>
-            <ul className="mt-4 space-y-2 text-sm text-white/70">
-              {group.items.map((skill, index) => (
-                <li
-                  key={`${group.id}-${index}`}
-                  className="flex items-center justify-between gap-2"
-                >
-                  <div className="flex items-center gap-2">
-                    <span className="h-1.5 w-1.5 rounded-full bg-violet-400" />
+            <h3 className="text-white font-display text-lg sm:text-xl font-medium">
+              {group.title}
+            </h3>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {group.items.map((skill, index) => {
+                let badgeColor =
+                  "text-[var(--purple-primary)] bg-[var(--purple-primary)]/10 border-[var(--purple-primary)]/20";
+                if (skill.level === "Advanced")
+                  badgeColor =
+                    "text-[var(--cyan-accent)] bg-[var(--cyan-accent)]/10 border-[var(--cyan-accent)]/20";
+                if (skill.level === "Intermediate")
+                  badgeColor =
+                    "text-[var(--blue-accent)] bg-[var(--blue-accent)]/10 border-[var(--blue-accent)]/20";
+
+                return (
+                  <div
+                    key={`${group.id}-${index}`}
+                    className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 py-1.5 pl-3 pr-1.5 text-sm text-[var(--text-secondary)] transition-colors hover:border-white/20 hover:bg-white/10"
+                  >
                     <span>{skill.name}</span>
+                    <span
+                      className={`text-[10px] tracking-wider uppercase font-medium px-2 py-0.5 rounded-full border ${badgeColor}`}
+                    >
+                      {skill.level}
+                    </span>
                   </div>
-                  <span className="text-xs text-violet-300 bg-violet-500/10 px-2 py-0.5 rounded-full border border-violet-500/20">
-                    {skill.level}
-                  </span>
-                </li>
-              ))}
-            </ul>
+                );
+              })}
+            </div>
           </motion.div>
         ))}
       </motion.div>

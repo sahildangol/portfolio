@@ -59,25 +59,25 @@
       "id": "fullstack",
       "title": "Full-Stack Product Engineering",
       "description": "React, Node.js, Python services, and resilient APIs for production-scale apps.",
-      "iconKey": "web"
+      "iconKey": "/about_fullstack.png"
     },
     {
       "id": "ai-ml",
       "title": "AI/ML Product Integration",
       "description": "Agentic workflows, RAG architecture, and model-backed decision systems.",
-      "iconKey": "backend"
+      "iconKey": "/about_ai.png"
     },
     {
       "id": "system-design",
       "title": "System Design and Architecture",
       "description": "Microservice boundaries, schema design, and performance-oriented backend planning.",
-      "iconKey": "mobile"
+      "iconKey": "/about_system.png"
     },
     {
       "id": "community",
       "title": "Engineering Leadership",
       "description": "Cross-functional planning, mentoring, and open-source community programs.",
-      "iconKey": "creator"
+      "iconKey": "/about_leadership.png"
     }
   ],
   "focusTabs": [
@@ -178,7 +178,7 @@
       "accent": "from-sky-500/20 via-slate-900/20 to-cyan-500/20",
       "url": "https://your-nasa-project-link",
       "github": "https://github.com/sahildangol",
-      "image": "/images/projects/spaceapps.webp"
+      "image": "/project_nasa.png"
     },
     {
       "id": "krishi-sathi",
@@ -191,7 +191,7 @@
       "accent": "from-emerald-500/20 via-slate-900/20 to-teal-500/20",
       "url": "https://your-krishi-sathi-link",
       "github": "https://github.com/sahildangol",
-      "image": "/images/projects/krishisathi.webp"
+      "image": "/project_krishi.png"
     },
     {
       "id": "nepse-catboost",
@@ -204,7 +204,7 @@
       "accent": "from-cyan-500/20 via-slate-900/20 to-blue-500/20",
       "url": "https://your-nepse-project-link",
       "github": "https://github.com/sahildangol",
-      "image": "/images/projects/nepse.webp"
+      "image": "/about_ai.png"
     },
     {
       "id": "autotft-research",

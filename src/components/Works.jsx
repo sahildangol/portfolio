@@ -14,12 +14,12 @@ const Works = () => {
         <h2 className={styles.sectionHeadText}>Project Stream.</h2>
       </motion.div>
 
-      <div className="mt-8 overflow-hidden rounded-3xl">
-        <div className="carousel-track flex w-max gap-4 sm:gap-6">
+      <div className="mt-12 overflow-hidden rounded-3xl">
+        <div className="carousel-track flex w-max gap-6">
           {loopProjects.map((project, index) => (
             <article
               key={`${project.id}-${index}`}
-              className="relative min-h-[400px] w-[85vw] max-w-[620px] md:w-[46vw] lg:w-[44vw] overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-8 hover-card flex flex-col justify-between"
+              className="relative min-h-[420px] w-[85vw] max-w-[620px] md:w-[46vw] lg:w-[44vw] overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-8 hover-card flex flex-col justify-between group"
             >
               <div
                 className={`absolute inset-0 opacity-70 bg-gradient-to-br ${project.accent}`}
@@ -27,17 +27,25 @@ const Works = () => {
               />
               <div className="relative z-10 flex h-full flex-col justify-between">
                 <div className="space-y-3">
-                  <div className="w-full h-40 sm:h-48 overflow-hidden rounded-xl border border-white/10 relative">
+                  <div className="w-full h-48 sm:h-56 overflow-hidden rounded-xl border border-white/10 relative group-hover:border-[var(--purple-primary)]/30 transition-colors duration-300">
                     {project.image ? (
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-full object-cover"
-                        loading="lazy"
-                      />
+                      <>
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#0A0E1A] to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-300 flex items-end p-6">
+                          <span className="text-white font-medium flex items-center gap-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            View Details{" "}
+                            <span className="text-[var(--cyan-accent)]">→</span>
+                          </span>
+                        </div>
+                      </>
                     ) : (
                       <div className="w-full h-full bg-white/5 flex items-center justify-center text-white/30 text-xs text-center px-4">
-                        Image Placeholder (Need User Content)
+                        Image Placeholder
                       </div>
                     )}
                   </div>
@@ -70,25 +78,15 @@ const Works = () => {
                   ))}
                 </div>
 
-                <div className="mt-6 flex items-center gap-4">
-                  {project.url && (
-                    <a
-                      href={project.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex rounded-full bg-white/10 border border-white/20 px-4 py-2 text-xs font-medium text-white transition hover:bg-white/20 hover:scale-105"
-                    >
-                      Live Demo
-                    </a>
-                  )}
+                <div className="mt-6 flex items-center gap-4 relative z-20">
                   {project.github && (
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex rounded-full border border-white/20 px-4 py-2 text-xs font-medium text-white/85 transition hover:text-white hover:border-white/40 hover:scale-105"
+                      className="btn-secondary inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 backdrop-blur-md px-6 py-2.5 text-xs font-semibold text-[var(--text-primary)] hover:text-white transition-all shadow-sm"
                     >
-                      GitHub Repo
+                      View Project
                     </a>
                   )}
                 </div>
