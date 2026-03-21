@@ -141,7 +141,7 @@ Time: ${form.time || "Not specified"}
           </label>
           <label className="flex flex-col sm:col-span-1">
             <span className="text-[var(--text-primary)] font-medium mb-3 text-base">
-              Meeting Date (Optional)
+              Meeting Date
             </span>
             <input
               type="date"
@@ -153,7 +153,7 @@ Time: ${form.time || "Not specified"}
           </label>
           <label className="flex flex-col sm:col-span-1">
             <span className="text-[var(--text-primary)] font-medium mb-3 text-base">
-              Meeting Time (Optional)
+              Meeting Time
             </span>
             <input
               type="time"
