@@ -44,7 +44,7 @@ const Education = () => {
                   isPrimary ? "text-cyan-200" : "text-white/50"
                 }`}
               >
-                {credential.title}
+                {credential.title || "Credential"}
               </p>
               <p
                 className={`mt-4 font-display font-medium ${
@@ -65,6 +65,17 @@ const Education = () => {
                 >
                   {credential.description}
                 </p>
+              )}
+
+              {credential.url && (
+                <a
+                  href={credential.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-flex rounded-full border border-white/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/80 transition hover:bg-white/10 hover:text-white"
+                >
+                  View Details
+                </a>
               )}
             </div>
           );

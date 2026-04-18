@@ -26,8 +26,8 @@ const config = {
         "hero-pattern": "url('/src/assets/herobg.png')",
       },
       fontFamily: {
-        display: ['"Sora"', "sans-serif"],
-        body: ['"Outfit"', "sans-serif"],
+        display: ['"Space Grotesk"', "sans-serif"],
+        body: ['"Manrope"', "sans-serif"],
         mono: ['"IBM Plex Mono"', "monospace"],
       },
     },

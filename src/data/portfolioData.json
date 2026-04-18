@@ -1,10 +1,9 @@
 {
   "profile": {
     "name": "Sahil Dangol",
-    "role": "Full-Stack AI Engineer",
-    "location": "Lalitpur, Nepal",
-    "tagline": "Designing and deploying reliable full-stack AI systems from architecture to production.",
-    "experienceSummary": "2+ years delivering full-stack products, backend services, and AI-enabled workflows.",
+    "role": "Full-Stack Gen AI Engineer",
+    "tagline": "Building reliable GenAI and full-stack products for real users.",
+    "experienceSummary": "2+ years across enterprise software, AI pipelines, and high-concurrency systems.",
     "cvUrl": "/SahilDangolCV.pdf",
     "socialLinks": [
       {
@@ -21,36 +20,32 @@
   },
   "navLinks": [
     { "id": "about", "title": "About" },
-    { "id": "education", "title": "Education" },
-    { "id": "highlights", "title": "Focus" },
     { "id": "experience", "title": "Experience" },
     { "id": "projects", "title": "Projects" },
-    { "id": "lab", "title": "AI/ML" },
     { "id": "skills", "title": "Skills" },
     { "id": "contact", "title": "Contact" }
   ],
   "heroHighlights": [
-    "2+ years in Software Engineering",
-    "AI/ML systems for Classification and forecasting",
-    "President at KathFOSS"
+    "Agentic and forecasting AI systems",
+    "President, KathFOSS"
   ],
   "insightCards": [
     {
       "id": "architecture",
       "title": "System Design to Deployment",
-      "description": "Lead architecture, API contracts, data modeling, and production rollout with measurable reliability.",
+      "description": "Own architecture, API contracts, and rollout strategy with measurable reliability outcomes.",
       "badge": "E2E"
     },
     {
       "id": "ai-engineering",
       "title": "Applied AI Engineering",
-      "description": "Build RAG and forecasting pipelines grounded in evaluation, governance, and practical business impact.",
+      "description": "Build RAG, agentic, and forecasting systems grounded in evaluation and practical business impact.",
       "badge": "AI"
     },
     {
       "id": "execution",
       "title": "Execution Under Constraints",
-      "description": "Ship quickly without compromising maintainability, observability, or stakeholder communication.",
+      "description": "Ship quickly without sacrificing maintainability, observability, or stakeholder alignment.",
       "badge": "OPS"
     }
   ],
@@ -58,25 +53,25 @@
     {
       "id": "fullstack",
       "title": "Full-Stack Product Engineering",
-      "description": "React, Node.js, Python services, and resilient APIs for production-scale apps.",
+      "description": "Build production-ready web applications with clear UX, resilient APIs, and maintainable architecture.",
       "iconKey": "/about_fullstack.png"
     },
     {
       "id": "ai-ml",
       "title": "AI/ML Product Integration",
-      "description": "Agentic workflows, RAG architecture, and model-backed decision systems.",
+      "description": "Integrate agentic workflows, RAG pipelines, and model-assisted decision flows into product experiences.",
       "iconKey": "/about_ai.png"
     },
     {
       "id": "system-design",
       "title": "System Design and Architecture",
-      "description": "Microservice boundaries, schema design, and performance-oriented backend planning.",
+      "description": "Define system boundaries, schema strategy, and backend performance plans for long-term scalability.",
       "iconKey": "/about_system.png"
     },
     {
       "id": "community",
       "title": "Engineering Leadership",
-      "description": "Cross-functional planning, mentoring, and open-source community programs.",
+      "description": "Lead cross-functional delivery, mentoring, and community-driven engineering programs.",
       "iconKey": "/about_leadership.png"
     }
   ],
@@ -85,26 +80,26 @@
       "id": "engineering",
       "label": "Engineering",
       "points": [
-        "Own full feature lifecycle from requirement definition to monitored deployment.",
-        "Build maintainable frontends and backend services with clear interfaces.",
-        "Optimize performance and reliability through profiling, caching, and clean data flow."
+        "Own the full feature lifecycle from scope definition to monitored deployment.",
+        "Build maintainable frontend and backend modules with explicit interfaces.",
+        "Optimize reliability through profiling, instrumentation, and structured data flow."
       ]
     },
     {
       "id": "ai",
       "label": "AI/ML",
       "points": [
-        "Deploy forecasting and retrieval systems that support real decisions.",
+        "Deploy forecasting and retrieval systems that support real product decisions.",
         "Use practical evaluation loops for prompt quality, model drift, and output trust.",
-        "Integrate AI capabilities into product UX instead of isolated demos."
+        "Integrate AI features directly into product workflows, not isolated demos."
       ]
     },
     {
       "id": "fintech",
       "label": "FinTech",
       "points": [
-        "Design financial data pipelines with consistency and auditability in mind.",
-        "Translate market signals into dashboards and actionable product insights.",
+        "Design financial data pipelines with consistency, traceability, and auditability.",
+        "Translate market signals into actionable reporting and product insights.",
         "Balance delivery speed with accuracy and risk controls in reporting flows."
       ]
     },
@@ -112,27 +107,29 @@
       "id": "leadership",
       "label": "Leadership",
       "points": [
-        "Coordinate engineering priorities with product and stakeholder needs.",
+        "Coordinate engineering priorities with product and stakeholder constraints.",
         "Lead open-source collaboration and technical mentorship through KathFOSS.",
         "Drive projects from proof-of-concept to practical adoption."
       ]
     }
   ],
   "about": {
-    "heading": "Engineering Products That Hold Up In Production",
-    "description": "I build end-to-end software systems where strong architecture meets reliable implementation. My work combines full-stack engineering, AI/ML integration, and fintech research to deliver products that are clear to operate and valuable to users.",
+    "heading": "Engineering Products That Survive Real Traffic",
+    "description": "I build end-to-end systems that are reliable, clear to operate, and ready for production.",
     "credentials": [
       {
         "id": "education",
+        "title": "Degree",
         "name": "Tribhuvan University, Bachelor of Computer Engineering (2023-2027)",
         "description": "Focused on distributed systems, data engineering, and AI-integrated software architecture.",
-        "url": "https://education-link"
+        "url": "https://kathford.edu.np"
       },
       {
         "id": "rice",
-        "title": "Credential",
-        "name": "Rice University , Engineering Project Management Specialization",
-        "url": "https://credential-link"
+        "title": "Specialization",
+        "name": "Rice University, Engineering Project Management Specialization",
+        "description": "Focused on technical risk assessment and lead-time optimization for complex systems.",
+        "url": "https://www.coursera.org/specializations/engineering-project-management"
       }
     ]
   },
@@ -144,11 +141,11 @@
       "iconKey": "logo",
       "iconBg": "#0F172A",
       "date": "May 2025 - Present",
-      "url": "https://company-link",
+      "url": "https://books.eviebillings.com",
       "points": [
-        "Built enterprise accounting capabilities with robust SQL schemas, speeding up reporting workflows by 30%.",
-        "Architected hardware-integrated and microservice-driven workflows handling 10,000+ daily concurrent operations.",
-        "Partnered with business stakeholders to align technical delivery, saving 15h/week in manual effort."
+        "Engineered core infrastructure for enterprise accounting modules, including real-time FX integration and schema-extensible custom fields.",
+        "Architected Flutter and BLE/GATT powered IoT workflows for hardware control with real-time state synchronization.",
+        "Developed containerized reporting infrastructure that reduced rendering latency by 40% while maintaining 99.9% uptime."
       ]
     },
     {
@@ -158,99 +155,112 @@
       "iconKey": "creator",
       "iconBg": "#111827",
       "date": "2025 - Present",
-      "url": "https://kathfoss-link",
+      "url": "https://github.com/KathFOSS",
       "points": [
-        "Lead national open-source initiatives connecting 500+ students, researchers, and industry contributors.",
-        "Directed delivery of community platforms and programs with Agile execution discipline across 10+ teams.",
-        "Mentored over 100+ builders through workshops and collaborative technical events."
+        "Lead a national open-source community of 100+ active contributors with Agile/Scrum project workflows.",
+        "Coordinate contributor programs, technical workshops, and cross-team collaboration events.",
+        "Promote production-grade development discipline including CI/CD and code quality practices."
       ]
     }
   ],
   "featuredProjects": [
     {
-      "id": "nasa-space-apps",
-      "title": "NASA Space Apps Project",
-      "subtitle": "Global Nominee",
-      "description": "Built an immersive terrain and landing simulation concept under hackathon constraints, emphasizing engineering rigor and rapid iteration.",
-      "tags": ["Simulation", "Geospatial", "Rapid Prototyping"],
-      "metrics": ["Global Nominee", "Top 1%"],
+      "id": "autotft-financial-forecasting",
+      "title": "AutoTFT Financial Forecasting Engine",
+      "subtitle": "Quantitative ML Research",
+      "description": "Implemented Temporal Fusion Transformers (TFT) for multi-horizon return prediction in Nepal's banking sector, outperforming standard XGBoost baselines in time-series accuracy.",
+      "tags": ["PyTorch", "TFT", "Forecasting", "Quant Research"],
+      "metrics": ["Multi-Horizon", "Beats XGBoost Baseline"],
       "className": "md:col-span-3 md:row-span-2",
-      "accent": "from-sky-500/20 via-slate-900/20 to-cyan-500/20",
-      "url": "https://your-nasa-project-link",
-      "github": "https://github.com/sahildangol",
+      "accent": "from-cyan-500/20 via-slate-900/20 to-sky-500/20",
+      "url": "",
+      "github": "https://github.com/sahildangol/commercial-bank-api",
       "image": "/project_nasa.png"
     },
     {
-      "id": "krishi-sathi",
-      "title": "Krishi Sathi AI Assistant",
-      "subtitle": "Nationwide Hackathon Winner",
-      "description": "Developed an AI assistant for localized agricultural and financial guidance with a practical product-first UX.",
-      "tags": ["Assistant", "Localization", "Agritech"],
-      "metrics": ["National Winner", "10K+ Users"],
+      "id": "agentic-ai-therapist",
+      "title": "Agentic AI Therapist",
+      "subtitle": "Privacy-First GenAI",
+      "description": "Developed a zero-knowledge AI system using cloud inference and a hybrid RAG/CAG architecture with PII-aware handling to maximize data security.",
+      "tags": ["Agentic AI", "RAG/CAG", "PII Security", "Gemini API"],
+      "metrics": ["Zero-Knowledge Pattern", "Hybrid Retrieval"],
       "className": "md:col-span-3 md:row-span-1",
-      "accent": "from-emerald-500/20 via-slate-900/20 to-teal-500/20",
-      "url": "https://your-krishi-sathi-link",
-      "github": "https://github.com/sahildangol",
+      "accent": "from-emerald-500/20 via-slate-900/20 to-cyan-500/20",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7423671026384859136/",
+      "github": "https://github.com/sahildangol/agentic-therapist",
       "image": "/project_krishi.png"
     },
     {
-      "id": "nepse-catboost",
-      "title": "Quantitative NEPSE Predictor",
-      "subtitle": "CatBoost Strategy",
-      "description": "Engineered a short-term return prediction pipeline with regime filtering and temporal feature design for improved market signal quality.",
-      "tags": ["CatBoost", "Quant", "Time-Series"],
-      "metrics": ["+15% Accuracy", "Regime Filter"],
+      "id": "titan-city-unity",
+      "title": "Titan City: 3D Titan Exploration Game",
+      "subtitle": "NASA Space Apps 2023",
+      "description": "Developed a complex Unity-based exploration game with custom physics and resource-management mechanics, recognized as National Winner and NASA Space Apps Global Nominee.",
+      "tags": ["Unity", "3D Game", "Custom Physics"],
+      "metrics": ["National Winner", "Global Nominee"],
       "className": "md:col-span-2 md:row-span-1",
-      "accent": "from-cyan-500/20 via-slate-900/20 to-blue-500/20",
-      "url": "https://your-nepse-project-link",
-      "github": "https://github.com/sahildangol",
-      "image": "/about_ai.png"
+      "accent": "from-amber-500/20 via-slate-900/20 to-rose-500/20",
+      "url": "https://www.facebook.com/share/v/1XYJ9rBFiv/",
+      "github": "",
+      "image": "/project_nasa.png"
     },
     {
-      "id": "autotft-research",
-      "title": "AutoTFT Forecasting Research",
-      "subtitle": "Banking Sector Forecasting",
-      "description": "Led 7-day banking-sector forecasting research using Temporal Fusion Transformers with curated longitudinal financial datasets.",
-      "tags": ["PyTorch", "AutoTFT", "Forecasting"],
-      "metrics": ["7-Day Horizon", "Sub-1s Inference"],
+      "id": "quant-nepse-stock-predictor",
+      "title": "Quantitative NEPSE Stock Predictor",
+      "subtitle": "Market Regime Modeling",
+      "description": "Built an XGBoost model with SMA-based market regime filtering to forecast short-term equity momentum for the Nepal Stock Exchange.",
+      "tags": ["XGBoost", "SMA Regime Filter", "Time-Series"],
+      "metrics": ["Short-Term Momentum", "NEPSE"],
       "className": "md:col-span-4 md:row-span-1",
-      "accent": "from-rose-500/20 via-slate-900/20 to-red-500/20",
-      "url": "https://your-autotft-project-link",
-      "github": "https://github.com/sahildangol",
+      "accent": "from-blue-500/20 via-slate-900/20 to-cyan-500/20",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7431059900161671168/",
+      "github": "",
       "image": "/about_system.png"
+    },
+    {
+      "id": "pdf-rag-brain",
+      "title": "PDF-RAG Brain (Mistral-7B Intelligence)",
+      "subtitle": "Semantic Retrieval Engine",
+      "description": "Built an end-to-end semantic search engine using PDF tokenization and vector database storage for accurate natural-language retrieval.",
+      "tags": ["RAG", "Mistral-7B", "Vector DB", "Semantic Search"],
+      "metrics": ["End-to-End Pipeline", "Natural-Language QA"],
+      "className": "md:col-span-4 md:row-span-1",
+      "accent": "from-teal-500/20 via-slate-900/20 to-emerald-500/20",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7324354215714148352/",
+      "github": "",
+      "image": "/about_ai.png"
     }
   ],
   "lab": {
     "title": "AI/ML Systems Lab",
     "subtitle": "Production-minded Research",
-    "description": "I focus on practical AI systems that combine forecasting, retrieval, and responsible deployment patterns for real product environments.",
+    "description": "A practical research track focused on forecasting, retrieval, and deployable GenAI components for product environments.",
     "highlights": [
       {
         "id": "forecasting",
         "title": "Financial Forecasting Stack",
-        "description": "Temporal Fusion Transformer workflows for short-term directional movement modeling."
+        "description": "Temporal Fusion Transformer workflows for short-term directional movement and risk-aware signal modeling."
       },
       {
         "id": "rag",
         "title": "Hybrid Retrieval Pipelines",
-        "description": "RAG architecture For Custom AI Agents."
+        "description": "RAG/CAG architecture patterns for custom AI agents and secure contextual reasoning."
       },
       {
         "id": "data",
         "title": "Dataset Engineering",
-        "description": "Structure and Feature Engineer Data for consistent experimentation and evaluation."
+        "description": "Data structuring and feature engineering for consistent experimentation and evaluation loops."
       }
     ],
     "cards": [
       {
         "id": "methods",
         "title": "Methods",
-        "value": "RAG, Transformer,Classical ML,Gradient Boosting Algorithms, Evaluation"
+        "value": "RAG · CAG · Transformers · Gradient Boosting · Evaluation"
       },
       {
         "id": "outcome",
         "title": "Outcome Focus",
-        "value": "Explainable,Accurate and deployable AI systems"
+        "value": "Explainable, accurate, and deployable AI systems"
       }
     ]
   },
@@ -260,44 +270,68 @@
       "title": "Languages",
       "items": [
         { "name": "Python", "level": "Expert" },
-        { "name": "TypeScript", "level": "Advanced" },
-        { "name": "JavaScript", "level": "Advanced" },
+        { "name": "TypeScript", "level": "Expert" },
+        { "name": "JavaScript", "level": "Expert" },
         { "name": "Dart", "level": "Intermediate" },
         { "name": "SQL", "level": "Advanced" },
         { "name": "Solidity", "level": "Intermediate" }
       ]
     },
     {
-      "id": "backend",
-      "title": "Backend and Infra",
+      "id": "ai-ml",
+      "title": "AI and ML",
       "items": [
-        { "name": "Node.js", "level": "Advanced" },
+        { "name": "LangGraph", "level": "Advanced" },
+        { "name": "LangChain", "level": "Advanced" },
+        { "name": "RAG/CAG", "level": "Expert" },
+        { "name": "Agentic Workflows", "level": "Expert" },
+        { "name": "LoRA/QLoRA", "level": "Advanced" },
+        { "name": "GGUF/AWQ", "level": "Intermediate" },
+        { "name": "PyTorch", "level": "Advanced" },
+        { "name": "Scikit-learn", "level": "Advanced" },
+        { "name": "Temporal Fusion Transformers", "level": "Advanced" },
+        { "name": "XGBoost", "level": "Advanced" }
+      ]
+    },
+    {
+      "id": "backend",
+      "title": "Backend, Infra and Mobile",
+      "items": [
+        { "name": "Node.js", "level": "Expert" },
         { "name": "FastAPI", "level": "Expert" },
-        { "name": "Django", "level": "Intermediate" },
-        { "name": "Nest.js", "level": "Intermediate" },
+        { "name": "Django", "level": "Advanced" },
+        { "name": "Nest.js", "level": "Advanced" },
         { "name": "PostgreSQL", "level": "Advanced" },
         { "name": "MongoDB", "level": "Advanced" },
         { "name": "Redis", "level": "Intermediate" },
-        { "name": "Docker", "level": "Advanced" }
+        { "name": "Docker", "level": "Advanced" },
+        { "name": "Kafka", "level": "Intermediate" },
+        { "name": "RabbitMQ", "level": "Intermediate" },
+        { "name": "CI/CD", "level": "Advanced" },
+        { "name": "Azure Services", "level": "Intermediate" },
+        { "name": "BLE/GATT", "level": "Advanced" }
       ]
     },
     {
       "id": "frontend",
       "title": "Frontend and Product",
       "items": [
-        { "name": "React", "level": "Advanced" },
-        { "name": "Next.js", "level": "Advanced" },
-        { "name": "Tailwind CSS", "level": "Advanced" },
+        { "name": "React", "level": "Expert" },
+        { "name": "Next.js", "level": "Expert" },
+        { "name": "Tailwind CSS", "level": "Expert" },
         { "name": "Flutter", "level": "Intermediate" },
         { "name": "Vue.js", "level": "Intermediate" },
-        { "name": "MUI", "level": "Intermediate" }
+        { "name": "MUI", "level": "Intermediate" },
+        { "name": "Bootstrap", "level": "Intermediate" },
+        { "name": "Framer Motion", "level": "Advanced" },
+        { "name": "Three.js", "level": "Intermediate" }
       ]
     }
   ],
   "contact": {
-    "sectionLabel": "Let's Build",
+    "sectionLabel": "Collaboration",
     "heading": "Contact",
-    "description": "Open to full-stack engineering, AI product, and fintech system opportunities.",
+    "description": "Open to full-stack and GenAI opportunities.",
     "email": "dangolsahil2005@gmail.com"
   },
   "caseStudies": [],

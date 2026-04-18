@@ -4,9 +4,7 @@ import Lenis from "lenis";
 import {
   About,
   Contact,
-  Education,
   Experience,
-  FocusTabs,
   Hero,
   Navbar,
   Tech,
@@ -78,16 +76,14 @@ const App = () => {
         <main id="main" className="relative z-10">
           <Hero />
           <About />
-          <Education />
-          <FocusTabs />
-          <Tech />
           <Experience />
           <Works />
+          <Tech />
           <div className="relative z-0">
             <Contact />
             <StarsCanvas />
           </div>
-          <footer className="w-full text-center py-6 text-white/40 text-sm glass-card border-none rounded-none mt-10">
+          <footer className="mt-10 w-full border-t border-white/10 py-7 text-center text-sm text-white/45">
             <p>
               Last updated:{" "}
               {new Date().toLocaleDateString("en-US", {

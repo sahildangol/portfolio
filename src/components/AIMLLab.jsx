@@ -45,7 +45,7 @@ const AIMLLab = () => {
               <motion.li
                 key={highlight.id}
                 variants={item}
-                className="glass-card rounded-2xl p-6 hover-card border border-white/5 transition-colors hover:border-[var(--purple-primary)]/30 flex flex-col"
+                className="glass-card rounded-2xl p-6 hover-card border border-white/10 transition-colors hover:border-[var(--cyan-accent)]/35 flex flex-col"
               >
                 <h4 className="text-[var(--text-primary)] font-semibold text-lg">
                   {highlight.title}
@@ -57,11 +57,11 @@ const AIMLLab = () => {
             ))}
           </motion.ul>
 
-          <div className="grid gap-6 sm:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2">
             {lab.cards.map((card) => (
               <div
                 key={card.id}
-                className="rounded-2xl border border-white/5 bg-[var(--bg-primary)]/50 p-6 flex flex-col items-center justify-center text-center transition hover:bg-white/5"
+                className="rounded-2xl border border-white/10 bg-[var(--bg-primary)]/50 p-6 flex flex-col items-center justify-center text-center transition hover:bg-white/5"
               >
                 <p className="text-[10px] font-mono tracking-widest uppercase text-white/40 mb-2">
                   {card.title}

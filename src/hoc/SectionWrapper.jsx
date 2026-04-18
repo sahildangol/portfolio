@@ -10,14 +10,16 @@ const SectionWrapper = (Component, idName) =>
         variants={staggerContainer()}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.25 }}
-        className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
+        viewport={{ once: true, amount: 0.18 }}
+        className={`${styles.padding} section-shell max-w-[92rem] mx-auto relative z-0`}
       >
         <span className="hash-span" id={idName}>
           &nbsp;
         </span>
 
-        <Component />
+        <div className="relative z-10">
+          <Component />
+        </div>
       </motion.section>
     );
   };

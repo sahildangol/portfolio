@@ -37,7 +37,7 @@ const ExperienceCard = ({ experience }) => (
         <h3 className="text-[var(--text-primary)] text-xl sm:text-2xl font-display font-semibold group-hover:text-[var(--cyan-accent)] transition-colors">
           {experience.title}
         </h3>
-        {experience.title.includes("Current") && (
+        {experience.date.includes("Present") && (
           <span className="inline-flex rounded-full border border-[var(--green-accent)]/30 bg-[var(--green-accent)]/10 px-2.5 py-0.5 font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-[var(--green-accent)]">
             Current
           </span>

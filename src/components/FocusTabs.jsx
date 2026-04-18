@@ -18,6 +18,9 @@ const FocusTabs = () => {
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Focus Areas</p>
         <h2 className={styles.sectionHeadText}>Strategic Focus.</h2>
+        <p className="mt-4 max-w-3xl text-sm leading-relaxed text-white/70 sm:text-base">
+          Core themes that shape how products are planned, built, and scaled.
+        </p>
       </motion.div>
 
       <div className="mt-8 flex flex-wrap gap-3" role="tablist">
@@ -31,8 +34,8 @@ const FocusTabs = () => {
               id={`tab-${tab.id}`}
               className={`relative overflow-hidden rounded-full px-6 py-3 text-base sm:text-lg font-semibold transition ${
                 isActive
-                  ? "text-stealth-900"
-                  : "text-white/70 border border-white/20 hover:text-white hover:bg-white/5"
+                  ? "text-[#07111f]"
+                  : "border border-white/20 text-white/70 hover:bg-white/5 hover:text-white"
               }`}
               role="tab"
               aria-selected={isActive}
@@ -44,7 +47,7 @@ const FocusTabs = () => {
               {isActive && (
                 <motion.span
                   layoutId="tab-indicator"
-                  className="absolute inset-0 bg-white"
+                  className="absolute inset-0 bg-gradient-to-r from-[var(--cyan-accent)] to-[#f8fafc]"
                   transition={{ type: "spring", stiffness: 400, damping: 30 }}
                 />
               )}
@@ -65,7 +68,7 @@ const FocusTabs = () => {
           id={`panel-${activeTab.id}`}
           role="tabpanel"
           aria-labelledby={`tab-${activeTab.id}`}
-          className="glass-card mt-10 rounded-3xl p-8 sm:p-10"
+          className="glass-card mt-10 rounded-3xl border border-white/10 p-8 sm:p-10"
         >
           <motion.ul
             variants={container}
@@ -79,7 +82,9 @@ const FocusTabs = () => {
                 variants={item}
                 className="flex items-start gap-3"
               >
-                <span className="mt-1 h-2 w-2 rounded-full bg-violet-400" />
+                <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-[var(--cyan-accent)]/40 bg-[var(--cyan-accent)]/10 font-mono text-[10px] text-[var(--cyan-accent)]">
+                  {index + 1}
+                </span>
                 <span>{point}</span>
               </motion.li>
             ))}
