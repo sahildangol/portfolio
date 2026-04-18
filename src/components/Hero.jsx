@@ -15,13 +15,7 @@ const Hero = () => {
           viewport={{ once: true }}
           className="max-w-4xl"
         >
-          <motion.p
-            variants={item}
-            className="inline-flex rounded-full border border-[var(--green-accent)]/45 bg-[var(--green-accent)]/12 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--green-accent)] shadow-[0_8px_24px_rgba(52,211,153,0.25)]"
-          >
-            Available for Product + AI Roles
-          </motion.p>
-
+      
           <motion.h1
             variants={item}
             className="mt-6 font-display text-5xl font-bold leading-[1.04] tracking-tight text-white drop-shadow-[0_14px_34px_rgba(2,8,23,0.55)] sm:text-6xl md:text-[74px] lg:text-[78px]"
