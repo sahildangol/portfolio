@@ -1,85 +1,97 @@
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
 import { motion } from "framer-motion";
-import "react-vertical-timeline-component/style.min.css";
-import { styles } from "../styles";
-import { experiences } from "../constants";
-import { SectionWrapper } from "../hoc";
-import { textVariant } from "../utils/motion";
 
-const ExperienceCard = ({ experience }) => (
-  <VerticalTimelineElement
-    className="vertical-timeline-element--work group"
-    contentStyle={{
-      background: "var(--bg-secondary)",
-      color: "var(--text-primary)",
-      border: "1px solid rgba(255,255,255,0.05)",
-      boxShadow: "0 10px 30px rgba(0,0,0,0.2)",
-      borderRadius: "24px",
-    }}
-    contentArrowStyle={{ borderRight: "7px solid var(--bg-secondary)" }}
-    date={experience.date}
-    iconStyle={{ background: experience.iconBg }}
-    icon={
-      <div className="flex justify-center items-center w-full h-full">
-        <img
-          src={experience.icon}
-          alt={experience.company_name}
-          className="w-[60%] h-[60%] object-contain"
-        />
-      </div>
-    }
-  >
-    <div>
-      <div className="flex items-center justify-between gap-4 flex-wrap">
-        <h3 className="text-[var(--text-primary)] text-xl sm:text-2xl font-display font-semibold group-hover:text-[var(--cyan-accent)] transition-colors">
-          {experience.title}
-        </h3>
-        {experience.date.includes("Present") && (
-          <span className="inline-flex rounded-full border border-[var(--green-accent)]/30 bg-[var(--green-accent)]/10 px-2.5 py-0.5 font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-[var(--green-accent)]">
-            Current
-          </span>
-        )}
-      </div>
-      <a
-        href={experience.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-[var(--purple-primary)] text-[15px] font-medium mt-1 inline-block"
-      >
-        {experience.company_name}
-      </a>
-    </div>
-    <ul className="mt-6 list-disc ml-5 space-y-3">
-      {experience.points.map((point, index) => (
-        <li
-          key={`${experience.id}-point-${index}`}
-          className="text-[var(--text-secondary)] text-[14px] leading-[1.7] pl-1"
-        >
-          {point}
-        </li>
+import { styles } from "../styles";
+import { education, experiences } from "../constants";
+import { SectionWrapper } from "../hoc";
+import { container, item, textVariant } from "../utils/motion";
+
+const Experience = () => (
+  <>
+    <motion.div variants={textVariant()}>
+      <p className={styles.sectionSubText}>Experience</p>
+      <h2 className={`${styles.sectionHeadText} mt-3`}>Where I've worked.</h2>
+    </motion.div>
+
+    <motion.ol
+      variants={container}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, margin: "-80px" }}
+      className="mt-12 space-y-4"
+    >
+      {experiences.map((exp) => {
+        const current = exp.date.includes("Present");
+        return (
+          <motion.li key={exp.id} variants={item}>
+            <article className="card p-6 sm:p-7">
+              <div className="flex flex-wrap items-start gap-4">
+                <img
+                  src={exp.icon}
+                  alt={`${exp.company_name} logo`}
+                  className={`h-12 rounded-xl border border-line bg-white object-contain p-1.5 ${exp.iconWide ? "w-28" : "w-12"}`}
+                />
+                <div className="min-w-0 flex-1">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <h3 className="text-lg font-semibold">{exp.title}</h3>
+                    {current && (
+                      <span className="rounded-full bg-[#EEF2FF] px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.16em] text-violet">
+                        Now
+                      </span>
+                    )}
+                  </div>
+                  <a href={exp.url} target="_blank" rel="noopener noreferrer" className="text-sm text-muted hover:text-ink">
+                    {exp.company_name}
+                  </a>
+                </div>
+                <span className="w-full font-mono text-xs text-muted sm:w-auto">{exp.date}</span>
+              </div>
+              <ul className="mt-5 space-y-2.5 border-t border-line pt-5">
+                {exp.points.map((point) => (
+                  <li key={point} className="flex gap-3 text-[0.95rem] leading-relaxed text-ink-2">
+                    <span className="mt-[0.65rem] h-1 w-1 shrink-0 rounded-full bg-violet" aria-hidden="true" />
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </article>
+          </motion.li>
+        );
+      })}
+    </motion.ol>
+
+    <motion.div variants={textVariant()} className="mt-14">
+      <p className={styles.sectionSubText}>Education</p>
+    </motion.div>
+    <motion.ul
+      variants={container}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, margin: "-80px" }}
+      className="mt-5 grid gap-3"
+    >
+      {education.map((ed) => (
+        <motion.li key={ed.id} variants={item}>
+          <a href={ed.url} target="_blank" rel="noopener noreferrer" className="card card-hover flex items-center gap-4 p-4 sm:p-5">
+            {ed.icon ? (
+              <img src={ed.icon} alt={`${ed.school} logo`} className="h-11 w-11 rounded-xl border border-line bg-white object-contain p-1" />
+            ) : (
+              <span className="grid h-11 w-11 place-items-center rounded-xl border border-line bg-white text-violet" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M22 10 12 5 2 10l10 5 10-5z" />
+                  <path d="M6 12v5c3 2 9 2 12 0v-5" />
+                </svg>
+              </span>
+            )}
+            <div className="min-w-0 flex-1">
+              <p className="font-semibold text-ink">{ed.title}</p>
+              <p className="text-sm text-muted">{ed.school}</p>
+            </div>
+            {ed.date && <span className="font-mono text-xs text-muted">{ed.date}</span>}
+          </a>
+        </motion.li>
       ))}
-    </ul>
-  </VerticalTimelineElement>
+    </motion.ul>
+  </>
 );
-const Experience = () => {
-  return (
-    <>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Career Timeline</p>
-        <h2 className={styles.sectionHeadText}>Professional Experience.</h2>
-      </motion.div>
-      <div className="mt-20 flex flex-col">
-        <VerticalTimeline>
-          {experiences.map((experience) => (
-            <ExperienceCard key={experience.id} experience={experience} />
-          ))}
-        </VerticalTimeline>
-      </div>
-    </>
-  );
-};
 
 export default SectionWrapper(Experience, "experience");

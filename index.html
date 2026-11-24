@@ -2,18 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/logo-mark.svg" />
+    <!-- Start downloading the 3D guide immediately, in parallel with the app code -->
+    <link rel="preload" href="/models/guide.glb" as="fetch" type="model/gltf-binary" crossorigin="anonymous" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Portfolio of Sahil Dangol, a Full-Stack AI Engineer specializing in building scalable software systems and AI integrations."
+      content="Sahil Dangol is an AI engineer in Kathmandu, building internal AI tools and AI infrastructure: RAG, classical ML, token optimisation and model routing."
     />
 
     <!-- Open Graph Tags -->
-    <meta property="og:title" content="Sahil Dangol | Full-Stack AI Engineer" />
+    <meta property="og:title" content="Sahil Dangol | AI Engineer" />
     <meta
       property="og:description"
-      content="Designing and deploying reliable full-stack AI systems from architecture to production."
+      content="AI engineer building internal AI tools and AI infrastructure."
     />
     <meta property="og:url" content="https://sahil.info.np" />
     <meta property="og:type" content="website" />
@@ -26,14 +28,15 @@
         "@type": "Person",
         "name": "Sahil Dangol",
         "url": "https://sahil.info.np",
-        "jobTitle": "Full-Stack AI Engineer",
+        "jobTitle": "AI Engineer",
+        "worksFor": { "@type": "Organization", "name": "Teslatech", "url": "https://teslatech.com.np" },
         "sameAs": [
           "https://www.linkedin.com/in/sahil-dangol",
           "https://github.com/sahildangol"
         ]
       }
     </script>
-    <title>Sahil Dangol | Full-Stack AI Engineer</title>
+    <title>Sahil Dangol | AI Engineer</title>
   </head>
   <body>
     <div id="root"></div>

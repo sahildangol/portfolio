@@ -29,6 +29,13 @@ export default [
       ...react.configs['jsx-runtime'].rules,
       ...reactHooks.configs.recommended.rules,
       'react/jsx-no-target-blank': 'off',
+      'react/prop-types': 'off',
+      'react/no-unescaped-entities': 'off',
+      // react-three-fiber elements take three.js props
+      'react/no-unknown-property': [
+        'error',
+        { ignore: ['args', 'position', 'rotation', 'scale', 'intensity', 'transparent', 'depthWrite', 'object', 'map', 'renderOrder', 'toneMapped', 'visible', 'colorWrite'] },
+      ],
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },

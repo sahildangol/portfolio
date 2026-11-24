@@ -1,17 +1,9 @@
 const styles = {
-  paddingX: "px-3 sm:px-5 lg:px-8",
-  paddingY: "py-16 sm:py-24 lg:py-28",
-  padding: "px-3 sm:px-5 lg:px-8 py-16 sm:py-24 lg:py-28",
+  paddingX: "px-5 sm:px-8 lg:px-12",
+  padding: "px-5 sm:px-8 lg:px-12 py-20 sm:py-24",
 
-  heroHeadText:
-    "font-display font-semibold text-white text-5xl sm:text-6xl lg:text-7xl leading-[1.02] tracking-tight",
-  heroSubText:
-    "text-white/80 font-body text-base sm:text-xl lg:text-2xl leading-relaxed",
-
-  sectionHeadText:
-    "text-white font-display font-semibold text-3xl sm:text-4xl lg:text-5xl tracking-tight",
-  sectionSubText:
-    "text-xs sm:text-sm text-[var(--text-tertiary)] uppercase tracking-[0.22em]",
+  sectionHeadText: "font-display font-bold tracking-tight text-ink text-[2.5rem] leading-[1.02] sm:text-6xl",
+  sectionSubText: "font-mono text-[11px] uppercase tracking-[0.24em] text-violet",
 };
 
 export { styles };

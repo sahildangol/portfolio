@@ -1,24 +1,23 @@
 import { useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 import Lenis from "lenis";
-import {
-  About,
-  Contact,
-  Experience,
-  Hero,
-  Navbar,
-  Tech,
-  Works,
-  StarsCanvas,
-} from "./components";
+
+import { Contact, Engineering, Experience, Hero, Navbar, Works } from "./components";
+import Guide from "./components/guide/Guide";
+import { setLenis } from "./lib/scroll";
+import Logo from "./components/brand/Logo";
+
+const MODEL_CREDIT = {
+  title: "10 Gusion - Dimension Walker",
+  url: "https://sketchfab.com/3d-models/10-gusion-dimension-walker-c4ac293b1349440f87087e96c810a42c",
+  author: "itadorisenpai76",
+  authorUrl: "https://sketchfab.com/itadorisenpai76",
+};
 
 const App = () => {
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.05,
-      smoothWheel: true,
-      smoothTouch: false,
-    });
+    const lenis = new Lenis({ duration: 1.05, smoothWheel: true });
+    setLenis(lenis);
 
     let rafId;
     const raf = (time) => {
@@ -29,25 +28,13 @@ const App = () => {
 
     const handleAnchorClick = (event) => {
       const anchor = event.target.closest("a[href^='#']");
-      if (!anchor) {
-        return;
-      }
-
+      if (!anchor) return;
       const hash = anchor.getAttribute("href");
-      if (!hash || hash === "#") {
-        return;
-      }
-
+      if (!hash || hash === "#") return;
       const target = document.querySelector(hash);
-      if (!target) {
-        return;
-      }
-
+      if (!target) return;
       event.preventDefault();
-      lenis.scrollTo(target, {
-        offset: -90,
-        duration: 1,
-      });
+      lenis.scrollTo(target, { offset: -90, duration: 1 });
     };
 
     document.addEventListener("click", handleAnchorClick);
@@ -55,41 +42,44 @@ const App = () => {
     return () => {
       document.removeEventListener("click", handleAnchorClick);
       cancelAnimationFrame(rafId);
+      setLenis(null);
       lenis.destroy();
     };
   }, []);
 
   return (
     <BrowserRouter>
-      <div className="min-h-screen text-[var(--text-secondary)] font-body relative overflow-x-hidden w-full selection:bg-cyan-500/30">
-        <div className="animated-mesh-bg">
-          <div className="orb orb-1"></div>
-          <div className="orb orb-2"></div>
-          <div className="orb orb-3"></div>
-          <div className="orb orb-4"></div>
-          <div className="orb orb-5"></div>
-        </div>
+      <div className="relative min-h-screen w-full overflow-x-hidden font-body">
         <a href="#main" className="sr-only focus:not-sr-only">
           Skip to main content
         </a>
         <Navbar />
+        <Guide />
         <main id="main" className="relative z-10">
           <Hero />
-          <About />
+          <Engineering />
           <Experience />
           <Works />
-          <Tech />
-          <div className="relative z-0">
-            <Contact />
-            <StarsCanvas />
-          </div>
-          <footer className="mt-10 w-full border-t border-white/10 py-7 text-center text-sm text-white/45">
-            <p>
-              Last updated:{" "}
-              {new Date().toLocaleDateString("en-US", {
-                month: "long",
-                year: "numeric",
-              })}
+          <Contact />
+          <footer className="guide-pad mx-auto max-w-[96rem] border-t border-line px-5 py-10 text-sm text-muted sm:px-8 lg:px-12">
+            <div className="flex flex-wrap items-center justify-between gap-4">
+              <Logo size={30} />
+              <p>© {new Date().getFullYear()} Sahil Dangol · Kathmandu</p>
+            </div>
+            <p className="mt-4 text-xs text-muted/80">
+              Guide character based on{" "}
+              <a className="underline hover:text-ink" href={MODEL_CREDIT.url} target="_blank" rel="noopener noreferrer">
+                “{MODEL_CREDIT.title}”
+              </a>{" "}
+              by{" "}
+              <a className="underline hover:text-ink" href={MODEL_CREDIT.authorUrl} target="_blank" rel="noopener noreferrer">
+                {MODEL_CREDIT.author}
+              </a>
+              , licensed under{" "}
+              <a className="underline hover:text-ink" href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">
+                CC BY 4.0
+              </a>
+              . Modified: face and hair retextured, weapon and effects removed, re-posed and animated in code. Character design from Mobile Legends: Bang Bang © Moonton.
             </p>
           </footer>
         </main>

@@ -2,8 +2,12 @@
   "profile": {
     "name": "Sahil Dangol",
     "role": "AI Engineer",
-    "tagline": "Building reliable GenAI and full-stack products for real users.",
-    "experienceSummary": "2+ years across enterprise software, AI pipelines, and high-concurrency systems.",
+    "company": {
+      "name": "Teslatech",
+      "url": "https://teslatech.com.np"
+    },
+    "location": "Kathmandu, Nepal",
+    "tagline": "I engineer the whole stack of applied AI, from the memory that makes LLMs useful to the infrastructure that runs them.",
     "cvUrl": "/SahilDangolCV.pdf",
     "socialLinks": [
       {
@@ -16,327 +20,605 @@
         "label": "GitHub",
         "url": "https://github.com/sahildangol"
       }
+    ],
+    "specialties": [
+      "Memory systems",
+      "LLMs",
+      "AI infrastructure"
     ]
   },
   "navLinks": [
-    { "id": "about", "title": "About" },
-    { "id": "experience", "title": "Experience" },
-    { "id": "projects", "title": "Projects" },
-    { "id": "skills", "title": "Skills" },
-    { "id": "contact", "title": "Contact" }
-  ],
-  "heroHighlights": [
-    "Agentic and forecasting AI systems",
-    "Production-ready Hybrid RAG systems",
-    "LLM and SLM Optimizations",
-    "President, KathFOSS"
-  ],
-  "insightCards": [
-    {
-      "id": "architecture",
-      "title": "System Design to Deployment",
-      "description": "Own architecture, API contracts, and rollout strategy with measurable reliability outcomes.",
-      "badge": "E2E"
-    },
-    {
-      "id": "ai-engineering",
-      "title": "Applied AI Engineering",
-      "description": "Build RAG, agentic, and forecasting systems grounded in evaluation and practical business impact.",
-      "badge": "AI"
-    },
-    {
-      "id": "execution",
-      "title": "Execution Under Constraints",
-      "description": "Ship quickly without sacrificing maintainability, observability, or stakeholder alignment.",
-      "badge": "OPS"
-    }
-  ],
-  "services": [
-    {
-      "id": "fullstack",
-      "title": "Full-Stack Product Engineering",
-      "description": "Build production-ready web applications with clear UX, resilient APIs, and maintainable architecture.",
-      "iconKey": "/about_fullstack.png"
-    },
-    {
-      "id": "ai-ml",
-      "title": "AI/ML Product Integration",
-      "description": "Integrate agentic workflows, RAG pipelines, and model-assisted decision flows into product experiences.",
-      "iconKey": "/about_ai.png"
-    },
-    {
-      "id": "system-design",
-      "title": "System Design and Architecture",
-      "description": "Define system boundaries, schema strategy, and backend performance plans for long-term scalability.",
-      "iconKey": "/about_system.png"
-    },
-    {
-      "id": "community",
-      "title": "Engineering Leadership",
-      "description": "Lead cross-functional delivery, mentoring, and community-driven engineering programs.",
-      "iconKey": "/about_leadership.png"
-    }
-  ],
-  "focusTabs": [
     {
       "id": "engineering",
-      "label": "Engineering",
-      "points": [
-        "Own the full feature lifecycle from scope definition to monitored deployment.",
-        "Build maintainable frontend and backend modules with explicit interfaces.",
-        "Optimize reliability through profiling, instrumentation, and structured data flow."
-      ]
+      "title": "What I do"
     },
     {
-      "id": "ai",
-      "label": "AI/ML",
-      "points": [
-        "Deploy forecasting and retrieval systems that support real product decisions.",
-        "Use practical evaluation loops for prompt quality, model drift, and output trust.",
-        "Integrate AI features directly into product workflows, not isolated demos."
-      ]
+      "id": "experience",
+      "title": "Experience"
     },
     {
-      "id": "fintech",
-      "label": "FinTech",
-      "points": [
-        "Design financial data pipelines with consistency, traceability, and auditability.",
-        "Translate market signals into actionable reporting and product insights.",
-        "Balance delivery speed with accuracy and risk controls in reporting flows."
-      ]
+      "id": "projects",
+      "title": "Projects"
     },
     {
-      "id": "leadership",
-      "label": "Leadership",
-      "points": [
-        "Coordinate engineering priorities with product and stakeholder constraints.",
-        "Lead open-source collaboration and technical mentorship through KathFOSS.",
-        "Drive projects from proof-of-concept to practical adoption."
-      ]
+      "id": "contact",
+      "title": "Contact"
     }
   ],
-  "about": {
-    "heading": "Engineering Products That Survive Real Traffic",
-    "description": "I build end-to-end systems that are reliable, clear to operate, and ready for production.",
-    "credentials": [
-      {
-        "id": "education",
-        "title": "Degree",
-        "name": "Tribhuvan University, Bachelor of Computer Engineering (2023-2027)",
-        "description": "Focused on distributed systems, data engineering, and AI-integrated software architecture.",
-        "url": "https://kathford.edu.np"
-      },
-      {
-        "id": "rice",
-        "title": "Specialization",
-        "name": "Rice University, Engineering Project Management Specialization",
-        "description": "Focused on technical risk assessment and lead-time optimization for complex systems.",
-        "url": "https://www.coursera.org/specializations/engineering-project-management"
-      }
-    ]
-  },
   "experiences": [
+    {
+      "id": "teslatech-ai",
+      "title": "AI Engineer",
+      "company_name": "Teslatech",
+      "iconKey": "teslatech",
+      "iconBg": "#0b1322",
+      "date": "Nov 2026 – Present",
+      "url": "https://teslatech.com.np",
+      "points": [
+        "Build internal tools powered by RAG and classical ML.",
+        "Build the company's AI infrastructure, including token optimisation.",
+        "Design routers that automatically send each task to the right model, across local and hosted models."
+      ]
+    },
     {
       "id": "asteroid-se",
       "title": "Software Engineer",
-      "company_name": "Asteroid Studios",
-      "iconKey": "logo",
+      "company_name": "Asteroid Studio",
+      "iconKey": "asteroid",
       "iconBg": "#0F172A",
-      "date": "May 2025 - Present",
-      "url": "https://books.eviebillings.com",
+      "date": "May 2025 – Nov 2026",
+      "url": "https://www.asteroidstudio.org",
       "points": [
         "Engineered core infrastructure for enterprise accounting modules, including real-time FX integration and schema-extensible custom fields.",
-        "Architected Flutter and BLE/GATT powered IoT workflows for hardware control with real-time state synchronization.",
-        "Developed containerized reporting infrastructure that reduced rendering latency by 40% while maintaining 99.9% uptime."
+        "Architected Flutter and BLE/GATT IoT workflows for hardware control with real-time state sync."
       ]
     },
     {
       "id": "kathfoss-president",
       "title": "President",
       "company_name": "KathFOSS",
-      "iconKey": "creator",
+      "iconKey": "kathfoss",
       "iconBg": "#111827",
-      "date": "2025 - Present",
-      "url": "https://github.com/KathFOSS",
+      "date": "2025 – Present",
+      "url": "https://github.com/KathFOSS-Club",
       "points": [
-        "Lead a national open-source community of 100+ active contributors with Agile/Scrum project workflows.",
-        "Coordinate contributor programs, technical workshops, and cross-team collaboration events.",
-        "Promote production-grade development discipline including CI/CD and code quality practices."
-      ]
+        "Lead an open-source community of 100+ active contributors.",
+        "Run contributor programs, technical workshops and collaboration events.",
+        "Promote production-grade practice: CI/CD, code review and code quality."
+      ],
+      "iconWide": true
     }
   ],
   "featuredProjects": [
     {
       "id": "autotft-financial-forecasting",
-      "title": "AutoTFT Financial Forecasting Engine",
-      "subtitle": "Quantitative ML Research",
-      "description": "Implemented Temporal Fusion Transformers (TFT) for multi-horizon return prediction in Nepal's banking sector, outperforming standard XGBoost baselines in time-series accuracy.",
-      "tags": ["PyTorch", "TFT", "Forecasting", "Quant Research"],
-      "metrics": ["Multi-Horizon", "Beats XGBoost Baseline"],
-      "className": "md:col-span-3 md:row-span-2",
-      "accent": "from-cyan-500/20 via-slate-900/20 to-sky-500/20",
+      "featured": true,
+      "title": "AutoTFT Financial Forecasting",
+      "subtitle": "Quant ML research",
+      "description": "Temporal Fusion Transformers for multi-horizon return prediction in Nepal's banking sector, beating XGBoost baselines.",
+      "tags": [
+        "PyTorch",
+        "TFT",
+        "Time series"
+      ],
       "url": "",
-      "github": "https://github.com/sahildangol/commercial-bank-api",
-      "image": "/project_nasa.png"
+      "github": "https://github.com/sahildangol/commercial-bank-api"
     },
     {
       "id": "agentic-ai-therapist",
+      "featured": true,
       "title": "Agentic AI Therapist",
-      "subtitle": "Privacy-First GenAI",
-      "description": "Developed a zero-knowledge AI system using cloud inference and a hybrid RAG/CAG architecture with PII-aware handling to maximize data security.",
-      "tags": ["Agentic AI", "RAG/CAG", "PII Security", "Gemini API"],
-      "metrics": ["Zero-Knowledge Pattern", "Hybrid Retrieval"],
-      "className": "md:col-span-3 md:row-span-1",
-      "accent": "from-emerald-500/20 via-slate-900/20 to-cyan-500/20",
+      "subtitle": "Privacy-first GenAI",
+      "description": "A zero-knowledge AI system with hybrid RAG/CAG retrieval and PII-aware handling.",
+      "tags": [
+        "Agentic AI",
+        "RAG/CAG",
+        "Gemini API"
+      ],
       "url": "https://www.linkedin.com/feed/update/urn:li:activity:7423671026384859136/",
-      "github": "https://github.com/sahildangol/agentic-therapist",
-      "image": "/project_krishi.png"
+      "github": "https://github.com/sahildangol/agentic-therapist"
     },
     {
       "id": "titan-city-unity",
-      "title": "Titan City: 3D Titan Exploration Game",
+      "featured": true,
+      "title": "Titan City",
       "subtitle": "NASA Space Apps 2023",
-      "description": "Developed a complex Unity-based exploration game with custom physics and resource-management mechanics, recognized as National Winner and NASA Space Apps Global Nominee.",
-      "tags": ["Unity", "3D Game", "Custom Physics"],
-      "metrics": ["National Winner", "Global Nominee"],
-      "className": "md:col-span-2 md:row-span-1",
-      "accent": "from-amber-500/20 via-slate-900/20 to-rose-500/20",
+      "description": "A Unity exploration game with custom physics and resource management. National Winner and Global Nominee.",
+      "tags": [
+        "Unity",
+        "3D game",
+        "Custom physics"
+      ],
       "url": "https://www.facebook.com/share/v/1XYJ9rBFiv/",
-      "github": "",
-      "image": "/project_nasa.png"
+      "github": ""
     },
     {
       "id": "quant-nepse-stock-predictor",
+      "featured": false,
       "title": "Quantitative NEPSE Stock Predictor",
-      "subtitle": "Market Regime Modeling",
-      "description": "Built an XGBoost model with SMA-based market regime filtering to forecast short-term equity momentum for the Nepal Stock Exchange.",
-      "tags": ["XGBoost", "SMA Regime Filter", "Time-Series"],
-      "metrics": ["Short-Term Momentum", "NEPSE"],
-      "className": "md:col-span-4 md:row-span-1",
-      "accent": "from-blue-500/20 via-slate-900/20 to-cyan-500/20",
+      "subtitle": "Market regime modelling",
+      "description": "XGBoost with SMA-based regime filtering to forecast short-term momentum on the Nepal Stock Exchange.",
+      "tags": [
+        "XGBoost",
+        "Time series"
+      ],
       "url": "https://www.linkedin.com/feed/update/urn:li:activity:7431059900161671168/",
-      "github": "",
-      "image": "/about_system.png"
+      "github": ""
     },
     {
       "id": "pdf-rag-brain",
-      "title": "PDF-RAG Brain (Mistral-7B Intelligence)",
-      "subtitle": "Semantic Retrieval Engine",
-      "description": "Built an end-to-end semantic search engine using PDF tokenization and vector database storage for accurate natural-language retrieval.",
-      "tags": ["RAG", "Mistral-7B", "Vector DB", "Semantic Search"],
-      "metrics": ["End-to-End Pipeline", "Natural-Language QA"],
-      "className": "md:col-span-4 md:row-span-1",
-      "accent": "from-teal-500/20 via-slate-900/20 to-emerald-500/20",
+      "featured": false,
+      "title": "PDF-RAG Brain",
+      "subtitle": "Semantic retrieval",
+      "description": "End-to-end semantic search over PDFs with Mistral-7B and a vector database.",
+      "tags": [
+        "RAG",
+        "Mistral-7B",
+        "Vector DB"
+      ],
       "url": "https://www.linkedin.com/feed/update/urn:li:activity:7324354215714148352/",
-      "github": "",
-      "image": "/about_ai.png"
-    }
-  ],
-  "lab": {
-    "title": "AI/ML Systems Lab",
-    "subtitle": "Production-minded Research",
-    "description": "A practical research track focused on forecasting, retrieval, and deployable GenAI components for product environments.",
-    "highlights": [
-      {
-        "id": "forecasting",
-        "title": "Financial Forecasting Stack",
-        "description": "Temporal Fusion Transformer workflows for short-term directional movement and risk-aware signal modeling."
-      },
-      {
-        "id": "rag",
-        "title": "Hybrid Retrieval Pipelines",
-        "description": "RAG/CAG architecture patterns for custom AI agents and secure contextual reasoning."
-      },
-      {
-        "id": "data",
-        "title": "Dataset Engineering",
-        "description": "Data structuring and feature engineering for consistent experimentation and evaluation loops."
-      }
-    ],
-    "cards": [
-      {
-        "id": "methods",
-        "title": "Methods",
-        "value": "RAG · CAG · Transformers · Gradient Boosting · Evaluation"
-      },
-      {
-        "id": "outcome",
-        "title": "Outcome Focus",
-        "value": "Explainable, accurate, and deployable AI systems"
-      }
-    ]
-  },
-  "skillGroups": [
-    {
-      "id": "languages",
-      "title": "Languages",
-      "items": [
-        { "name": "Python", "level": "Expert" },
-        { "name": "TypeScript", "level": "Expert" },
-        { "name": "JavaScript", "level": "Expert" },
-        { "name": "Dart", "level": "Intermediate" },
-        { "name": "SQL", "level": "Advanced" },
-        { "name": "Solidity", "level": "Intermediate" }
-      ]
-    },
-    {
-      "id": "ai-ml",
-      "title": "AI and ML",
-      "items": [
-        { "name": "LangGraph", "level": "Advanced" },
-        { "name": "LangChain", "level": "Advanced" },
-        { "name": "RAG/CAG", "level": "Expert" },
-        { "name": "Agentic Workflows", "level": "Expert" },
-        { "name": "LoRA/QLoRA", "level": "Advanced" },
-        { "name": "GGUF/AWQ", "level": "Intermediate" },
-        { "name": "PyTorch", "level": "Advanced" },
-        { "name": "Scikit-learn", "level": "Advanced" },
-        { "name": "Temporal Fusion Transformers", "level": "Advanced" },
-        { "name": "XGBoost", "level": "Advanced" }
-      ]
-    },
-    {
-      "id": "backend",
-      "title": "Backend, Infra and Mobile",
-      "items": [
-        { "name": "Node.js", "level": "Expert" },
-        { "name": "FastAPI", "level": "Expert" },
-        { "name": "Django", "level": "Advanced" },
-        { "name": "Nest.js", "level": "Advanced" },
-        { "name": "PostgreSQL", "level": "Advanced" },
-        { "name": "MongoDB", "level": "Advanced" },
-        { "name": "Redis", "level": "Intermediate" },
-        { "name": "Docker", "level": "Advanced" },
-        { "name": "Kafka", "level": "Intermediate" },
-        { "name": "RabbitMQ", "level": "Intermediate" },
-        { "name": "CI/CD", "level": "Advanced" },
-        { "name": "Azure Services", "level": "Intermediate" },
-        { "name": "BLE/GATT", "level": "Advanced" }
-      ]
-    },
-    {
-      "id": "frontend",
-      "title": "Frontend and Product",
-      "items": [
-        { "name": "React", "level": "Expert" },
-        { "name": "Next.js", "level": "Expert" },
-        { "name": "Tailwind CSS", "level": "Expert" },
-        { "name": "Flutter", "level": "Intermediate" },
-        { "name": "Vue.js", "level": "Intermediate" },
-        { "name": "MUI", "level": "Intermediate" },
-        { "name": "Bootstrap", "level": "Intermediate" },
-        { "name": "Framer Motion", "level": "Advanced" },
-        { "name": "Three.js", "level": "Intermediate" }
-      ]
+      "github": ""
     }
   ],
   "contact": {
-    "sectionLabel": "Collaboration",
-    "heading": "Contact",
-    "description": "Open to full-stack and GenAI opportunities.",
+    "heading": "Let's build something.",
+    "description": "Open to AI engineering roles, collaborations and open-source work.",
     "email": "dangolsahil2005@gmail.com"
   },
-  "caseStudies": [],
-  "testimonials": [],
-  "blogPosts": []
+  "guide": {
+    "steps": [
+      {
+        "section": "hero",
+        "pose": "welcome"
+      },
+      {
+        "section": "engineering",
+        "pose": "present",
+        "say": "This is what I do. Three areas I go deep on."
+      },
+      {
+        "section": "memory",
+        "pose": "point",
+        "say": "First, memory: how LLMs remember."
+      },
+      {
+        "section": "llms",
+        "pose": "present",
+        "say": "Then the models themselves."
+      },
+      {
+        "section": "infra",
+        "pose": "point",
+        "say": "And the infrastructure that runs it all."
+      },
+      {
+        "section": "experience",
+        "pose": "point",
+        "say": "Here's where I've worked, and where I study."
+      },
+      {
+        "section": "projects",
+        "pose": "present",
+        "say": "A few things I've built."
+      },
+      {
+        "section": "contact",
+        "pose": "welcome",
+        "say": "Got a role or a project in mind? Message me!",
+        "cta": true
+      }
+    ],
+    "greeting": "Hi, I'm Sahil! Scroll and I'll show you around.",
+    "clicked": "Hey! Got a role or a project in mind?",
+    "chat": {
+      "intro": "Hey! I'm Sahil. Ask me anything about my work, or pick a question below.",
+      "fallback": "Good question! I don't have a ready answer for that one. Message me and I'll reply personally.",
+      "suggestions": {
+        "hero": [
+          "What do you do?",
+          "Where do you work?",
+          "Are you open to work?"
+        ],
+        "engineering": [
+          "Tell me about memory systems",
+          "What's a model router?",
+          "What's your stack?"
+        ],
+        "memory": [
+          "How do you build agent memory?",
+          "What's RAG?",
+          "What do you do at Teslatech?"
+        ],
+        "llms": [
+          "Do you fine-tune models?",
+          "Can models run locally?",
+          "What's your stack?"
+        ],
+        "infra": [
+          "What's a model router?",
+          "How do you cut token costs?",
+          "Are you open to work?"
+        ],
+        "experience": [
+          "What do you do at Teslatech?",
+          "What's KathFOSS?",
+          "Are you open to work?"
+        ],
+        "projects": [
+          "Tell me about your projects",
+          "Can I see your CV?",
+          "How can I reach you?"
+        ],
+        "contact": [
+          "How can I reach you?",
+          "Are you open to work?",
+          "Can I see your CV?"
+        ]
+      },
+      "intents": [
+        {
+          "id": "hello",
+          "keywords": [
+            "hi",
+            "hello",
+            "hey",
+            "namaste",
+            "yo",
+            "sup",
+            "good morning",
+            "good evening"
+          ],
+          "answer": "Hey there! Ask me about my work, my projects, or how to reach me."
+        },
+        {
+          "id": "about",
+          "keywords": [
+            "who are you",
+            "about you",
+            "about yourself",
+            "yourself",
+            "introduce*",
+            "what do you do",
+            "who is sahil"
+          ],
+          "answer": "I'm Sahil Dangol, an AI engineer in Kathmandu. I go deep on three things: memory systems, LLMs and AI infrastructure.",
+          "go": "engineering"
+        },
+        {
+          "id": "work",
+          "keywords": [
+            "teslatech",
+            "at teslatech",
+            "work",
+            "job",
+            "company",
+            "current*",
+            "employer",
+            "where do you work",
+            "working on",
+            "right now",
+            "day job"
+          ],
+          "answer": "I'm an AI engineer at Teslatech, the studio behind Callbreak. I build internal tools with RAG and classical ML, plus the infrastructure behind them: token optimisation and model routing.",
+          "go": "experience"
+        },
+        {
+          "id": "memory",
+          "keywords": [
+            "memory",
+            "memories",
+            "remember*",
+            "recall",
+            "agent memory",
+            "vector*",
+            "graph store*",
+            "episodic"
+          ],
+          "answer": "Memory is my favourite part: long-term and episodic memory for agents, hybrid RAG/CAG retrieval, and the vector and graph stores underneath.",
+          "go": "memory"
+        },
+        {
+          "id": "rag",
+          "keywords": [
+            "rag",
+            "retrieval",
+            "cag",
+            "ground*"
+          ],
+          "answer": "RAG lets a model look things up in your own documents before answering, so it stays grounded. I build hybrid RAG/CAG: dense, sparse and cache-augmented retrieval.",
+          "go": "memory"
+        },
+        {
+          "id": "llm",
+          "keywords": [
+            "llm*",
+            "fine-tune*",
+            "fine tune*",
+            "finetun*",
+            "lora",
+            "qlora",
+            "langgraph",
+            "agentic",
+            "eval*",
+            "train*",
+            "model*"
+          ],
+          "answer": "Yes. I adapt open models with LoRA/QLoRA, wire them into agentic workflows with LangGraph, and use evals to check they actually got better.",
+          "go": "llms"
+        },
+        {
+          "id": "local",
+          "keywords": [
+            "local*",
+            "quantis*",
+            "quantiz*",
+            "gguf",
+            "awq",
+            "on device",
+            "offline",
+            "run locally",
+            "run local"
+          ],
+          "answer": "They can. I quantise models (GGUF, AWQ) so they run on local hardware, then route only the hard tasks to bigger hosted models.",
+          "go": "llms"
+        },
+        {
+          "id": "router",
+          "keywords": [
+            "router*",
+            "routing",
+            "route*",
+            "which model",
+            "pick the model"
+          ],
+          "answer": "A router reads each request and sends it to the best model for the job: a fast local model for simple work, a bigger one only when it's needed. Cheaper and quicker.",
+          "go": "infra"
+        },
+        {
+          "id": "tokens",
+          "keywords": [
+            "token*",
+            "cost*",
+            "cheaper",
+            "latency",
+            "optimis*",
+            "optimiz*",
+            "infra*",
+            "serving",
+            "inference"
+          ],
+          "answer": "I cut tokens and cost with routing, caching and leaner prompts, and keep serving fast under load with queues and good observability.",
+          "go": "infra"
+        },
+        {
+          "id": "projects",
+          "keywords": [
+            "project*",
+            "built",
+            "portfolio",
+            "nasa",
+            "therapist",
+            "forecast*",
+            "autotft",
+            "titan",
+            "side project*"
+          ],
+          "answer": "A few favourites: AutoTFT, financial forecasting with Temporal Fusion Transformers; an Agentic AI Therapist with privacy-first retrieval; and Titan City, a NASA Space Apps national winner.",
+          "go": "projects"
+        },
+        {
+          "id": "experience",
+          "keywords": [
+            "experience*",
+            "asteroid",
+            "previous*",
+            "before",
+            "career",
+            "history",
+            "worked"
+          ],
+          "answer": "AI engineer at Teslatech since November 2026. Before that I was a software engineer at Asteroid Studio in Lalitpur, building accounting and IoT systems.",
+          "go": "experience"
+        },
+        {
+          "id": "kathfoss",
+          "keywords": [
+            "kathfoss",
+            "open source",
+            "open-source",
+            "community",
+            "foss",
+            "president"
+          ],
+          "answer": "I'm president of KathFOSS, the Kathford FOSS Community, with 100+ active contributors. We run workshops, hackathons and contributor programs.",
+          "go": "experience"
+        },
+        {
+          "id": "stack",
+          "keywords": [
+            "stack",
+            "skill*",
+            "tech",
+            "tools",
+            "tool",
+            "language*",
+            "python",
+            "typescript",
+            "framework*"
+          ],
+          "answer": "Day to day: Python, TypeScript, PyTorch, LangGraph, FastAPI, Node.js, PostgreSQL, Redis, Docker and Kafka.",
+          "go": "engineering"
+        },
+        {
+          "id": "education",
+          "keywords": [
+            "study*",
+            "studies",
+            "university",
+            "degree",
+            "education",
+            "college",
+            "student",
+            "tribhuvan",
+            "kathford"
+          ],
+          "answer": "I'm studying Computer Engineering at Kathford International College (Tribhuvan University), 2023–2027, and I hold a Rice University specialization in engineering project management.",
+          "go": "experience"
+        },
+        {
+          "id": "hire",
+          "keywords": [
+            "hire",
+            "hiring",
+            "available",
+            "availability",
+            "open to work",
+            "opportunit*",
+            "freelanc*",
+            "collaborat*",
+            "work together",
+            "join",
+            "charge",
+            "rate",
+            "rates",
+            "price",
+            "for me",
+            "build me",
+            "freelance work",
+            "contract work"
+          ],
+          "answer": "Yes! I'm open to AI engineering roles, collaborations and open-source work. Want to send me a message?",
+          "cta": "contact"
+        },
+        {
+          "id": "contact",
+          "keywords": [
+            "contact",
+            "email",
+            "reach",
+            "message",
+            "linkedin",
+            "talk to you",
+            "get in touch"
+          ],
+          "answer": "The quickest way is the message form, or email dangolsahil2005@gmail.com. I'm on LinkedIn too.",
+          "cta": "contact"
+        },
+        {
+          "id": "cv",
+          "keywords": [
+            "cv",
+            "resume",
+            "résumé"
+          ],
+          "answer": "Here's my CV.",
+          "cta": "cv"
+        },
+        {
+          "id": "location",
+          "keywords": [
+            "where are you",
+            "location",
+            "based",
+            "nepal",
+            "kathmandu",
+            "live"
+          ],
+          "answer": "I'm based in Kathmandu, Nepal."
+        },
+        {
+          "id": "thanks",
+          "keywords": [
+            "thanks",
+            "thank you",
+            "thank",
+            "cool",
+            "nice",
+            "awesome",
+            "great",
+            "love it"
+          ],
+          "answer": "Anytime! Anything else you'd like to know?"
+        }
+      ]
+    }
+  },
+  "engineering": {
+    "kicker": "What I engineer",
+    "heading": "AI engineer. End to end.",
+    "intro": "I build everything from data pipelines to product UI, but three things are where I go deep: how models remember, how they're shaped, and how they run.",
+    "chapters": [
+      {
+        "id": "memory",
+        "number": "01",
+        "title": "Memory systems",
+        "tagline": "Giving LLMs a memory worth having.",
+        "description": "Agents that remember the right things, forget the rest, and recall it in milliseconds. I design short- and long-term memory, hybrid RAG/CAG retrieval, and the vector and graph stores underneath.",
+        "points": [
+          "Long-term and episodic memory for agents",
+          "Hybrid retrieval: dense, sparse and cache-augmented",
+          "Vector + graph stores, chunking and re-ranking"
+        ],
+        "accent": "violet"
+      },
+      {
+        "id": "llms",
+        "number": "02",
+        "title": "LLMs",
+        "tagline": "Making models fit the job.",
+        "description": "From prompt to fine-tune to production agent. I adapt open models with LoRA/QLoRA, quantise them to run anywhere, wire them into agentic workflows, and measure whether they actually got better.",
+        "points": [
+          "Fine-tuning with LoRA / QLoRA",
+          "Quantisation (GGUF, AWQ) for local inference",
+          "Agentic workflows with LangGraph, plus evals"
+        ],
+        "accent": "sky"
+      },
+      {
+        "id": "infra",
+        "number": "03",
+        "title": "AI infrastructure",
+        "tagline": "Running it all, efficiently.",
+        "description": "The systems that make AI affordable at scale: routers that send each task to the right model, local or hosted, token optimisation that cuts cost without losing quality, and serving that stays fast under load.",
+        "points": [
+          "Task-based routing across local and hosted models",
+          "Token optimisation and caching",
+          "Inference serving, queues and observability"
+        ],
+        "accent": "teal"
+      }
+    ],
+    "toolbox": [
+      "Python",
+      "TypeScript",
+      "PyTorch",
+      "LangGraph",
+      "FastAPI",
+      "Node.js",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "Kafka",
+      "React",
+      "Next.js"
+    ]
+  },
+  "education": [
+    {
+      "id": "kathford",
+      "title": "B.E. Computer Engineering",
+      "school": "Kathford International College · Tribhuvan University",
+      "date": "2023 – 2027",
+      "url": "https://kathford.edu.np",
+      "iconKey": "kathford"
+    },
+    {
+      "id": "rice",
+      "title": "Engineering Project Management Specialization",
+      "school": "Rice University (Coursera)",
+      "date": "",
+      "url": "https://www.coursera.org/specializations/engineering-project-management",
+      "iconKey": null
+    }
+  ]
 }
